@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: silver;
+    /* stops bottom scrollbar from appearing */
+    overflow-x: hidden;
+}
+
+button {
+    background-color: silver;
+    border: none;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 24vw;
+}
+  
+/* picture. is me. max and min size is kinda eyeballing it */
+img {
+    min-width: 10rem;
+    max-width: 15vw;
+    margin: 2rem 0 0.25rem;
+    border-radius: 100%;
+}
+  
+/* styling for the top titles */
+.header {
+    text-align: center;
+    font-style: bold;
+    margin: 0;
+    padding: 0;
+}
+  
+#subtitle {
+    font-style: italic;
+    padding: 0.25rem;
+}
+  
+/* homepage navigation styling */
+  
+.navigation a {
+    text-decoration: none;
+    color: black;
+    outline: 0px;
+}
+  
+.navigation button:hover,
+.navigation button:focus-within{
+    text-decoration: underline;
+    background-color:rgba(150, 150, 150);
+    /* min-width: 30vw; */
+    border-radius: 15px;
+}
+
+.navigation {
+    transition: 1000ms;
+    width:100%;
+}
+.navigation:hover {
+    width: 25%;
+}
