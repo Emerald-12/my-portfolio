@@ -1,20 +1,24 @@
 import './App.css'
-import Nav from './IndexNav/Nav.js'
-import Title from './Title'
-import Picture from './Picture'
 import './Style.css'
 
+import Nav from './Components/Nav.js'
+import Title from './Components/Title'
+import Picture from './Components/Picture'
+import {useSidebar} from './SidebarContext'
+
+
+ 
 function App() {
+  const sidebar = useSidebar()
   return (
-    <div className="App">
-      <div>
-        <Picture />
+    <div style={{position:"relative"}}>
+      <div className="App">
+          <Picture />
+          <Title />
+          <Nav />
       </div>
-      <div>
-        <Title />
-      </div>
-      <div>
-        <Nav />
+      <div className = { sidebar ? 'contentAfter' : 'contentBefore' }>
+        <p>hello portfolio world</p>
       </div>
     </div>
   );

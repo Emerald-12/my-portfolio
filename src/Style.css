@@ -15,7 +15,7 @@ button {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 24vw;
+    width: 100%;
 }
   
 /* picture. is me. max and min size is kinda eyeballing it */
@@ -58,7 +58,5 @@ img {
 .navigation {
     transition: 1000ms;
     width:100%;
-}
-.navigation:hover {
-    width: 25%;
+    background-color:red;
 }

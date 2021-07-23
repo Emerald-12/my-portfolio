@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  float:left;
+  width: 20%;
 }
 
 .App-header {
@@ -11,4 +13,24 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.contentAfter{
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width:80%;
+  height:100vh;
+  background-color: blue;
+  transition: all 0.5s;
+}
+
+.contentBefore{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width:80%;
+  height:100vh;
+  background-color: blue;
+  transition: all 0.5s;
 }

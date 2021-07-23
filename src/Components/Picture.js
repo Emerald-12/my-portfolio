@@ -1,9 +1,9 @@
-import image from './Me.jpg'
+import image from '../Media/Me.jpg'
 
 function Picture() {
     return (
         <div>
-            <img src = {image}/>
+            <img src = {image} alt=''/>
         </div>
     )
 }
