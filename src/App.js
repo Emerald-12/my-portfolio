@@ -12,13 +12,12 @@ function App() {
   const sidebar = useSidebar()
   return (
     <div style={{position:"relative"}}>
-      <div className="App">
+      <div className={ sidebar ? 'navAfter' : 'navBefore' }>
           <Picture />
           <Title />
           <Nav />
       </div>
       <div className = { sidebar ? 'contentAfter' : 'contentBefore' }>
-        <p>hello portfolio world</p>
         <iframe id='iframethingy' src='https://tomkhcoding.github.io/pokemon-search/' title='test'></iframe>
       </div>
     </div>

@@ -26,19 +26,6 @@ img {
     border-radius: 100%;
 }
   
-/* styling for the top titles */
-.header {
-    text-align: center;
-    font-style: bold;
-    margin: 0;
-    padding: 0;
-}
-  
-#subtitle {
-    font-style: italic;
-    padding: 0.25rem;
-}
-  
 /* homepage navigation styling */
   
 .navigation a {
