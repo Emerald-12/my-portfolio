@@ -19,6 +19,7 @@ function App() {
       </div>
       <div className = { sidebar ? 'contentAfter' : 'contentBefore' }>
         <p>hello portfolio world</p>
+        <iframe id='iframethingy' src='https://tomkhcoding.github.io/pokemon-search/' title='test'></iframe>
       </div>
     </div>
   );

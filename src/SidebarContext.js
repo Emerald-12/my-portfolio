@@ -15,8 +15,7 @@ export function SidebarProvider({children}) {
     const [sidebar, setSidebar] = useState(false)
 
     function toggleSidebar() {
-        
-        setSidebar(prevSidebar => !prevSidebar)
+        sidebar ? setSidebar(true) : setSidebar(prevSidebar => !prevSidebar)
     }
     return (
         <SidebarUpdateContext.Provider value = {toggleSidebar}>
