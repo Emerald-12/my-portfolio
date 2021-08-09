@@ -15,13 +15,13 @@ export function SidebarProvider({children}) {
     const [sidebar, setSidebar] = useState(false)
 
     function toggleSidebar() {
-        sidebar ? setSidebar(true) : setSidebar(prevSidebar => !prevSidebar)
+     setSidebar(prevSidebar => !prevSidebar)
     }
     return (
-        <SidebarUpdateContext.Provider value = {toggleSidebar}>
-            <SidebarContext.Provider value= {sidebar}>
+        <SidebarContext.Provider value= {sidebar}>
+            <SidebarUpdateContext.Provider value = {toggleSidebar}>
                 {children}
-            </SidebarContext.Provider>
-        </SidebarUpdateContext.Provider>
+            </SidebarUpdateContext.Provider>
+        </SidebarContext.Provider>
     )
 }

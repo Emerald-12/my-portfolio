@@ -16,6 +16,7 @@ button {
     justify-content: center;
     text-align: center;
     width: 100%;
+    border-radius: 15px;
 }
   
 /* picture. is me. max and min size is kinda eyeballing it */
@@ -32,18 +33,13 @@ img {
     text-decoration: none;
     color: black;
     outline: 0px;
+    list-style-type: none;
 }
   
-.navigation button:hover,
-.navigation button:focus-within{
+button:hover,
+button:focus-within{
     text-decoration: underline;
     background-color:rgba(150, 150, 150);
     /* min-width: 30vw; */
     border-radius: 15px;
-}
-
-.navigation {
-    transition: 1000ms;
-    width:100%;
-    background-color:red;
 }

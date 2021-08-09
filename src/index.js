@@ -6,12 +6,10 @@ import App from './App';
 import {SidebarProvider} from './SidebarContext'
 
 ReactDOM.render(
-  <React.StrictMode>
     <Router>
       <SidebarProvider>
         <App />
       </SidebarProvider>
-    </Router>
-  </React.StrictMode>,
+    </Router>,
   document.getElementById('root')
 );

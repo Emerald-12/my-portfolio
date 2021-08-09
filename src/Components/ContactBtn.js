@@ -1,12 +1,12 @@
 import {useSidebarUpdate} from '../SidebarContext.js'
 
-function About() {
+function ContactBtn() {
     const toggleSidebar = useSidebarUpdate()
     return (
         <div>
-            <button onClick={toggleSidebar}><h1>About</h1></button>
+            <button onClick={toggleSidebar}><h1>Contact</h1></button>
         </div>
     )
 }
 
-export default About
+export default ContactBtn

@@ -1,12 +1,12 @@
 import {useSidebarUpdate} from '../SidebarContext.js'
 
-function CV() {
+function AboutBtn() {
     const toggleSidebar = useSidebarUpdate()
     return (
         <div>
-            <button onClick={toggleSidebar}><h1>CV</h1></button>
+            <button onClick={toggleSidebar}><h1>About</h1></button>
         </div>
     )
 }
 
-export default CV
+export default AboutBtn
