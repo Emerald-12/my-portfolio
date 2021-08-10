@@ -1,6 +1,5 @@
-import React, { setState, useEffect, Suspense } from "react"
-// eslint-disable-next-line
-import ReactDOM from "react-dom"
+import React, {Suspense } from "react"
+
 // eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 

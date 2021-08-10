@@ -1,5 +1,4 @@
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
-import {Link} from 'react-router-dom'
 
 function ProjectsBtn() {
     const toggleSidebar = useSidebarUpdate()
@@ -7,7 +6,7 @@ function ProjectsBtn() {
     
     return (
         <div >
-            <button onClick={toggleSidebar}><h1>Projects</h1></button>
+            <button onClick={!sidebar ? toggleSidebar : undefined}><h1>Projects</h1></button>
         </div>
     )
 }
