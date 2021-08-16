@@ -6,8 +6,14 @@ import CVBtn from './CVBtn.js'
 import ContactBtn from './ContactBtn.js'
 
 import {useSidebar} from '../SidebarContext'
+import {NavLink} from 'react-router-dom'
+// eslint-disable-next-line
+import styled, {css} from 'styled-components';
 
-import {Link} from 'react-router-dom'
+const Link = styled(NavLink)`
+  text-decoration:none;
+`
+
 
 function Nav() {
     const sidebar = useSidebar()
@@ -22,20 +28,20 @@ function Nav() {
           <ul className="navigation">
             <li>
               <Link to='/projects'>
-                <ProjectsBtn />
+                <ProjectsBtn text = 'Projects'/>
               </Link>
             </li>
 
             <li>
-              <AboutBtn />
+              <AboutBtn text = 'About'/>
             </li>
     
             <li>
-              <CVBtn />
+              <CVBtn text = 'CV'/>
             </li>
     
             <li>
-              <ContactBtn />
+              <ContactBtn text = 'Contact'/>
             </li>
           </ul>
         </div>

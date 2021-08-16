@@ -1,10 +1,12 @@
-import {useSidebarUpdate} from '../SidebarContext.js'
+import {useSidebar, useSidebarUpdate} from '../SidebarContext.js'
+import MainButton from './MainButton.js'
 
-function CVBtn() {
+function CVBtn(props) {
     const toggleSidebar = useSidebarUpdate()
+    const sidebar = useSidebar()
     return (
         <div>
-            <button onClick={toggleSidebar}><h1>CV</h1></button>
+            <MainButton text = {props.text} onClick={!sidebar ? toggleSidebar : undefined}></MainButton>
         </div>
     )
 }

@@ -1,13 +1,12 @@
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
+import MainButton from './MainButton'
 
-function ProjectsBtn() {
+function ProjectsBtn(props) {
     const toggleSidebar = useSidebarUpdate()
     const sidebar = useSidebar()
     
     return (
-        <div >
-            <button onClick={!sidebar ? toggleSidebar : undefined}><h1>Projects</h1></button>
-        </div>
+        <MainButton text = {props.text} onClick={!sidebar ? toggleSidebar : undefined}></MainButton>
     )
 }
 

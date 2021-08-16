@@ -5,19 +5,6 @@ body{
     /* stops bottom scrollbar from appearing */
     overflow-x: hidden;
 }
-
-button {
-    background-color: silver;
-    border: none;
-    margin: auto;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    border-radius: 15px;
-}
   
 /* picture. is me. max and min size is kinda eyeballing it */
 img {
@@ -25,21 +12,4 @@ img {
     max-width: 15vw;
     margin: 2rem 0 0.25rem;
     border-radius: 100%;
-}
-  
-/* homepage navigation styling */
-  
-.navigation a {
-    text-decoration: none;
-    color: black;
-    outline: 0px;
-    list-style-type: none;
-}
-  
-button:hover,
-button:focus-within{
-    text-decoration: underline;
-    background-color:rgba(150, 150, 150);
-    /* min-width: 30vw; */
-    border-radius: 15px;
 }

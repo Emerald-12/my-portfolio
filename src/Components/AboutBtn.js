@@ -1,11 +1,11 @@
 import {useSidebarUpdate} from '../SidebarContext.js'
+import MainButton from './MainButton'
 
-function AboutBtn() {
+
+function AboutBtn(props) {
     const toggleSidebar = useSidebarUpdate()
     return (
-        <div>
-            <button onClick={toggleSidebar}><h1>About</h1></button>
-        </div>
+            <MainButton text = {props.text} onClick={toggleSidebar}></MainButton>
     )
 }
 
