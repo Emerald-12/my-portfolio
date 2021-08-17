@@ -1,3 +1,7 @@
+root{
+    box-sizing: border-box;
+
+}
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +9,7 @@ body{
     /* stops bottom scrollbar from appearing */
     overflow-x: hidden;
 }
-  
+
 /* picture. is me. max and min size is kinda eyeballing it */
 img {
     min-width: 10rem;

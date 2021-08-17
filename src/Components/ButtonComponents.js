@@ -1,10 +1,12 @@
 // eslint-disable-next-line
 import styled, {css} from 'styled-components';
+import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 
-const Button = styled.button`
+export const Button = styled.button`
     background-color: silver;
     border: none;
-    margin: 2rem auto;
+    padding:0;
+    margin: 0.5rem auto;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -12,13 +14,12 @@ const Button = styled.button`
     text-align: center;
     border-radius: 15px;
     width: 100%;
+    min-height:100%;
     min-width:200px;
     text-decoration:none;
 
-    & :hover, :focus-within{
+    & :hover{
         text-decoration: underline;
-        background-color:rgba(150, 150, 150);
-        border-radius: 15px;
     }
 
     .active & {
@@ -27,10 +28,17 @@ const Button = styled.button`
         background-color:black;
     }
 `
-function MainButton(props) {
+
+export function MainButton(props) {
+    const sidebar = useSidebar()
+    const toggleSidebar =useSidebarUpdate()
+    return(
+        <Button onClick={!sidebar ? toggleSidebar : undefined}><h1>{props.text}</h1></Button>
+        )
+    }
+
+export function ProjectButton(props) {
     return(
         <Button><h1>{props.text}</h1></Button>
     )
 }
-
-export default MainButton

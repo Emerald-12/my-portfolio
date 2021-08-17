@@ -1,8 +1,5 @@
-import {useEffect} from 'react'
 // eslint-disable-next-line
 import styled, {css} from 'styled-components'
-
-import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 
 const Display = styled.div`
     height:45vh;
@@ -15,14 +12,7 @@ const Frame =styled.iframe`
 
 
 function ProjectDisplay() {
-    const sidebar = useSidebar()
-    const toggleSidebar =useSidebarUpdate()
-    
-    useEffect(()=>{
-        if(!sidebar) { toggleSidebar()}
-        // eslint-disable-next-line
-    }, [])
-
+   
     return (
         <Display>
             <Frame src='https://tomkhcoding.github.io/pokemon-search/' title='test'></Frame>
