@@ -1,13 +1,12 @@
-import Title from './Title'
-import Picture from './Picture'
-import {MainButton} from './ButtonComponents';
-
-
 import {useSidebar} from '../SidebarContext'
 import {NavLink} from 'react-router-dom'
 // eslint-disable-next-line
 import styled, {css} from 'styled-components';
 // import MainButton from './ButtonComponents';
+
+import Title from './Title'
+import Picture from './Picture'
+import {MainButton} from './ButtonComponents';
 
 const Link = styled(NavLink)`
   text-decoration:none;
@@ -26,7 +25,7 @@ const ListItem = styled.li`
       pointer-events:none;
       user-select:none;
       cursor:default;
-  }
+    }
 `
 
 function Nav() {

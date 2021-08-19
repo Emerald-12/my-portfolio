@@ -17,8 +17,6 @@ const Nav = styled(NavComp)`
   left:40%;
   transition: all 1s;
   height:100vh;
-  
-  
 `
 
 

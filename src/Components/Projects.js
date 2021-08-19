@@ -12,32 +12,32 @@ const Link = styled(NavLink)`
   text-decoration:none;
   `
 
-  const Container = styled.div`
+const Container = styled.div`
     background-color: blue;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    
-    `
-    const List = styled.ul`
+`
+const List = styled.ul`
     grid-area: 1 / 1 / 3 / 2;
     margin: auto 1rem;
-    `
-    const ListItem = styled.li`
-    & :hover {
-      background-color:rgba(150, 150, 150);
-      border-radius: 15px;
-      & > * {
+`
+const ListItem = styled.li`
+    :hover {
+        background-color:rgba(150, 150, 150);
+        border-radius: 15px;
+        & > * {
         text-decoration:underline;
-      }
+        }
     }
+
     & .active {
-      pointer-events:none;
-      user-select:none;
-      cursor:default;
-  }
+        pointer-events:none;
+        user-select:none;
+        cursor:default;
+    }
 `
 
     // .div2 { grid-area: 1 / 2 / 2 / 4; }
