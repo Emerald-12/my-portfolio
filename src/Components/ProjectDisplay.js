@@ -2,12 +2,13 @@
 import styled, {css} from 'styled-components'
 
 const Display = styled.div`
-    height:45vh;
-    width:60vw;
+    grid-area:iframe;
+    margin:1rem;
 `
 const Frame =styled.iframe`
     width: 100%;
-    height: 100%;   
+    height: 100%; 
+    
 `
 
 
@@ -15,7 +16,7 @@ function ProjectDisplay() {
    
     return (
         <Display>
-            <Frame src='https://tomkhcoding.github.io/pokemon-search/' title='test'></Frame>
+            <Frame src='https://tomkhcoding.github.io/pokemon-search/' title='test' name='pokemon'></Frame>
         </Display>
     )
 }

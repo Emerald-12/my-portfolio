@@ -1,7 +1,7 @@
 import {useSidebar} from '../SidebarContext'
 import {NavLink} from 'react-router-dom'
 // eslint-disable-next-line
-import styled, {css} from 'styled-components';
+import styled, {css, ThemeProvider} from 'styled-components';
 // import MainButton from './ButtonComponents';
 
 import Title from './Title'
@@ -27,38 +27,43 @@ const ListItem = styled.li`
       cursor:default;
     }
 `
+const NavContainer = styled.div`
+  position: absolute;
+  top:0;
+  text-align: center;
+  width: 20%;
+  ${props => props.theme}
+  transition: all 1s;
+  height:100vh;
+`
 
 function Nav() {
     const sidebar = useSidebar()
+    const theme = sidebar ? {left: '0%'} : {left:'40%'}
     
     return (
-        
-      <div className={ sidebar ? 'navAfter' : null } style={{position:"relative", display:'flex', width:'100vw', height:'100vh'}}>
-        <div >
-          <Picture /> 
+      <ThemeProvider theme ={theme}>
+        <NavContainer >
+          <Picture />
           <Title />
-    
           <ul>
             <ListItem>
               <Link to='/projects'>
                 <MainButton text = 'Projects'/>
               </Link>
             </ListItem>
-
             <ListItem>
               <MainButton text = 'About'/>
             </ListItem>
-    
             <ListItem>
               <MainButton text = 'CV'/>
             </ListItem>
-    
             <ListItem>
               <MainButton text = 'Contact'/>
             </ListItem>
           </ul>
-        </div>
-</div>
+        </NavContainer>
+      </ThemeProvider>
     )
 }
 export default Nav

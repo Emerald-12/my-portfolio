@@ -13,39 +13,43 @@ const Link = styled(NavLink)`
   `
 
 const Container = styled.div`
+    height:80vh;
+    width:80vw;
     background-color: blue;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: grid; 
+        grid-template-columns: 0.5fr 1.5fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 15px 15px; 
+        grid-template-areas: 
+            "list iframe iframe"
+            "list iframe iframe"
+            "list info infos"; 
+}
 `
 const List = styled.ul`
-    grid-area: 1 / 1 / 3 / 2;
+    grid-area: list;
     margin: auto 1rem;
 `
 const ListItem = styled.li`
-    :hover {
-        background-color:rgba(150, 150, 150);
-        border-radius: 15px;
-        & > * {
+    & :hover {
+      background-color:rgba(150, 150, 150);
+      border-radius: 15px;
+      
+      * {
         text-decoration:underline;
-        }
+      }
     }
 
     & .active {
-        pointer-events:none;
-        user-select:none;
-        cursor:default;
+      pointer-events:none;
+      user-select:none;
+      cursor:default;
     }
 `
 
-    // .div2 { grid-area: 1 / 2 / 2 / 4; }
-    // .div3 { grid-area: 2 / 2 / 3 / 3; }
-    // .div4 { grid-area: 2 / 3 / 3 / 4; }
 function Projects() {
     const sidebar = useSidebar()
-    const toggleSidebar =useSidebarUpdate(true)
+    const toggleSidebar =useSidebarUpdate()
     
     useEffect(()=>{
         if(!sidebar) { toggleSidebar()}
