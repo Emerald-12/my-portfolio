@@ -1,11 +1,11 @@
-import React, {Suspense } from "react"
+import React, {Suspense } from "react";
 // eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
-import {useSidebar} from './SidebarContext'
+import {useSidebar} from './SidebarContext';
 import styled, {ThemeProvider} from "styled-components";
 
-import NavComp from './Components/NavComp'
-import Projects from './Components/Projects'
+import NavComp from './Components/NavComp';
+import Projects from './Components/Projects';
 import GlobalStyles from "./GlobalStyles";
 
 const ContentContainer = styled.div`
@@ -16,8 +16,7 @@ const ContentContainer = styled.div`
   height: ${props => props.theme.height};
   left: ${props => props.theme.left};
   padding: ${props => props.theme.padding};
-  top: ${props => props.theme.top}
-
+  top: ${props => props.theme.top};
 `
 
 function App() {
@@ -38,6 +37,7 @@ function App() {
     padding:'0',
     top:'0'
   };
+
 
   
   return (
