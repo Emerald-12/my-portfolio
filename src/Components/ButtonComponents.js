@@ -1,6 +1,9 @@
+import {useEffect, useState} from 'react'
+import { useFetch } from 'react-async';
 // eslint-disable-next-line
 import styled, {css} from 'styled-components';
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
+import {NavLink} from 'react-router-dom'
 
 export const Button = styled.button`
     background-color: silver;
@@ -28,6 +31,29 @@ export const Button = styled.button`
         background-color:black;
     }
 `
+const List = styled.ul`
+    grid-area: list;
+    margin: auto 1rem;
+`
+const ListItem = styled.li`
+    & :hover {
+      background-color:rgba(150, 150, 150);
+      border-radius: 15px;
+      
+      * {
+        text-decoration:underline;
+      }
+    }
+
+    & .active {
+      pointer-events:none;
+      user-select:none;
+      cursor:default;
+    }
+`
+const Link = styled(NavLink)`
+  text-decoration:none;
+  `
 
 export function MainButton(props) {
     const sidebar = useSidebar()
@@ -37,8 +63,31 @@ export function MainButton(props) {
         )
     }
 
-export function ProjectButton(props) {
+export function ProjectList() {
+    const ProjectButton = ()=>{
+        const {data, error} = useFetch(`https://tomkhcoding.github.io/api/projects.json`, {
+            headers: { accept: "application/json" },
+          })
+        if (error) return error.message
+        if (data) return (
+            data.slice(0, 5).map(data =>
+            <Link  to = {`/${data.path}`}>
+                <Button><h1>{`${data.name}`}</h1></Button>
+            </Link> )
+
+        )
+        return null
+        }
+    
     return(
-        <Button><h1>{props.text}</h1></Button>
+        <>
+            <List>
+                <ListItem>
+                    <ProjectButton />
+                </ListItem>
+            </List>
+            
+            
+        </>
     )
 }

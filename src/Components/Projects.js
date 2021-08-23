@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 // eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Redirect, NavLink} from 'react-router-dom';
@@ -6,11 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect, NavLink} from 'react-
 import styled, {css} from 'styled-components';
 
 import ProjectDisplay from './ProjectDisplay'
-import {ProjectButton} from './ButtonComponents';
-
-const Link = styled(NavLink)`
-  text-decoration:none;
-  `
+import {ProjectList} from './ButtonComponents';
 
 const Container = styled.div`
     height:90vh;
@@ -26,78 +22,36 @@ const Container = styled.div`
             "list info infos"; 
 `
 
-const List = styled.ul`
-    grid-area: list;
-    margin: auto 1rem;
-`
-const ListItem = styled.li`
-    & :hover {
-      background-color:rgba(150, 150, 150);
-      border-radius: 15px;
+
+export default function Projects() {
+    // const sidebar = useSidebar()
+    // const toggleSidebar =useSidebarUpdate()
+    // const [myData,setData] = useState();
+
+    // const getData= async()=>{
+    //   try {
+    //     const res = await fetch('https://tomkhcoding.github.io/api/projects.json');
+    //     const data = await res.json()
+    //     console.log(`statResOK: ${res.ok}`)
+    //     setData(data)
+    //     }
+    //   catch (e) { console.log(e) }
+    // }
       
-      * {
-        text-decoration:underline;
-      }
-    }
-
-    & .active {
-      pointer-events:none;
-      user-select:none;
-      cursor:default;
-    }
-`
-
-function Projects(props) {
-    const sidebar = useSidebar()
-    const toggleSidebar =useSidebarUpdate()
-    
-
-    
-    
-    useEffect(()=>{
-        if(!sidebar) { toggleSidebar()}
-        console.log(props)
-       //eslint-disable-next-line
-    },[props.data])
+    // useEffect(()=>{
+    //     getData()
+    //     if(!sidebar) { toggleSidebar()}
+    //     // console.log(myData)
+    //         // eslint-disable-next-line
+    //     },[])
+  
+    // // useEffect(()=>{
+    // //     
+    // //    //eslint-disable-next-line
+    // // },[props.data])
+    // // // text ={`${props.data[0].name}`}
 
     return (
-        <Router basename='/my-portfolio/projects'>
-            <Container>
-                <List>
-                    <ListItem>
-                    {props.data ? 
-                        <Link exact to = {`/${props.data[0].path}`}>
-                            <ProjectButton text ={`${props.data[0].name}`} />
-                        </Link> :null}
-                    </ListItem>
-
-                    <ListItem>
-                        <ProjectButton text ='Project Two' />
-                    </ListItem>
-
-                    <ListItem>
-                        <ProjectButton text ='Project Three' />
-                    </ListItem>
-
-                    <ListItem>
-                        <ProjectButton text ='Project Four' />
-                    </ListItem>
-
-                    <ListItem>
-                        <ProjectButton text ='Project Five' />
-                    </ListItem>
-                </List>
-
-                <Switch>
-                    {props.data ? 
-                    <Route exact path = {`/${props.data[0].path}`}>
-                        <ProjectDisplay/>
-                    </Route> :null}
-                </Switch>
-            
-            </Container>
-        </Router>
+        <ProjectList />
     )
 }
-
-export default Projects

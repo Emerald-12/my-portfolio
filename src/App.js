@@ -37,27 +37,6 @@ function App() {
     padding:'0',
     top:'0'
   };
-
-  const [data,setData] = useState();
-
-  const getData= async()=>{
-    try {
-			const res = await fetch('https://tomkhcoding.github.io/api/projects.json');
-      const data = await res.json()
-			console.log(`statResOK: ${res.ok}`)
-      setData(data)
-      console.log(data)
-    }
-    catch (e) { console.log(e) }
-  }
-    
-  useEffect(()=>{
-      getData()
-      
-          // eslint-disable-next-line
-      },[])
-
-
   
   return (
       <Suspense fallback={<h1>Loading</h1>}>
@@ -69,7 +48,7 @@ function App() {
                 <ContentContainer>
                   <Switch>
                     <Route path ='/projects'>
-                      <Projects data={data}/>
+                      <Projects />
                     </Route>
                   </Switch>
                 </ContentContainer>
