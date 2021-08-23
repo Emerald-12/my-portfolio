@@ -47,20 +47,25 @@ function Nav() {
           <Picture />
           <Title />
           <ul>
+            
             <ListItem>
               <Link to='/projects'>
                 <MainButton text = 'Projects'/>
               </Link>
             </ListItem>
+
             <ListItem>
               <MainButton text = 'About'/>
             </ListItem>
+
             <ListItem>
               <MainButton text = 'CV'/>
             </ListItem>
+
             <ListItem>
               <MainButton text = 'Contact'/>
             </ListItem>
+
           </ul>
         </NavContainer>
       </ThemeProvider>
