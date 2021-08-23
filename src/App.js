@@ -11,7 +11,6 @@ import GlobalStyles from "./GlobalStyles";
 const ContentContainer = styled.div`
   position: absolute;
   transition: all 1s;
-  display:flex;
   width: ${props => props.theme.width};
   height: ${props => props.theme.height};
   left: ${props => props.theme.left};

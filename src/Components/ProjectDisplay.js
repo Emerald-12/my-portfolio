@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components'
 
 const Display = styled.div`
     grid-area:iframe;
-    margin:1rem;
+    margin:1.5rem;
 `
 const Frame =styled.iframe`
     width: 100%;
