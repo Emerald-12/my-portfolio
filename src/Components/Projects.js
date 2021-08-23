@@ -24,8 +24,8 @@ const Container = styled.div`
             "list iframe iframe"
             "list iframe iframe"
             "list info infos"; 
-}
 `
+
 const List = styled.ul`
     grid-area: list;
     margin: auto 1rem;
