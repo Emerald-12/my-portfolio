@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import { useFetch } from 'react-async';
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 // eslint-disable-next-line
@@ -39,7 +39,6 @@ const Container = styled.div`
         gap: 15px 15px; 
         grid-template-areas: 
             "list iframe iframe"
-            
             "list info1 info2"; 
 `
 
@@ -65,7 +64,7 @@ function ProjectList() {
                         {data.slice(0, 5).map(data =>
                         <ListItem key ={data.id}>
                             <Link  exact to = {`/${data.path}`}>
-                                <Button><h1>{`${data.name}`}</h1></Button>
+                                {data.state==='disabled' ?<Button disabled><h1>{`${data.name}`}</h1></Button>: <Button><h1>{`${data.name}`}</h1></Button>}
                             </Link>
                         </ListItem>)}
                     </List>

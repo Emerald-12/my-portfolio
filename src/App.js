@@ -1,4 +1,3 @@
-import React, {Suspense, useState, useEffect} from "react";
 // eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {useSidebar} from './SidebarContext';
@@ -39,10 +38,10 @@ function App() {
   };
   
   return (
-      <Suspense fallback={<h1>Loading</h1>}>
         <Router basename='/my-portfolio'>
           <GlobalStyles/>
             <NavComp/>
+            
             <ThemeProvider theme={theme}>
               <div style={{position:'relative'}}>
                 <ContentContainer>
@@ -54,8 +53,8 @@ function App() {
                 </ContentContainer>
               </div>
             </ThemeProvider>
+
         </Router>
-      </Suspense>
   );
 }
 

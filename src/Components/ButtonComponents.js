@@ -2,10 +2,10 @@ import {useEffect, useState} from 'react'
 // eslint-disable-next-line
 import styled, {css} from 'styled-components';
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
-import {NavLink} from 'react-router-dom'
 
 export const Button = styled.button`
-    background-color: silver;
+    background-color: ${props => props.disabled ? "red" : "silver"};
+    color: ${props => props.disabled ? "black" : null};
     border: none;
     padding:0;
     margin: 0.5rem auto;
@@ -21,7 +21,8 @@ export const Button = styled.button`
     text-decoration:none;
 
     & :hover{
-        text-decoration: underline;
+        text-decoration: ${props => props.disabled ? "none": "underline"};
+        
     }
 
     .active & {
