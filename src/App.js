@@ -1,4 +1,4 @@
-import React, {Suspense } from "react";
+import React, {Suspense, useState, useEffect} from "react";
 // eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {useSidebar} from './SidebarContext';
@@ -20,6 +20,7 @@ const ContentContainer = styled.div`
 `
 
 function App() {
+  
   const sidebar = useSidebar()
   const theme = sidebar ? 
   {
@@ -38,6 +39,25 @@ function App() {
     top:'0'
   };
 
+  const [data,setData] = useState();
+
+  const getData= async()=>{
+    try {
+			const res = await fetch('https://tomkhcoding.github.io/api/projects.json');
+      const data = await res.json()
+			console.log(`statResOK: ${res.ok}`)
+      setData(data)
+      console.log(data)
+    }
+    catch (e) { console.log(e) }
+  }
+    
+  useEffect(()=>{
+      getData()
+      
+          // eslint-disable-next-line
+      },[])
+
 
   
   return (
@@ -49,7 +69,9 @@ function App() {
               <div style={{position:'relative'}}>
                 <ContentContainer>
                   <Switch>
-                    <Route path ='/projects'  component={Projects}/>
+                    <Route path ='/projects'>
+                      <Projects data={data}/>
+                    </Route>
                   </Switch>
                 </ContentContainer>
               </div>

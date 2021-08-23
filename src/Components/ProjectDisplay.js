@@ -12,7 +12,7 @@ const Frame =styled.iframe`
 `
 
 
-function ProjectDisplay() {
+function ProjectDisplay(props) {
    
     return (
         <Display>

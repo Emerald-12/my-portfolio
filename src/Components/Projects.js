@@ -13,7 +13,7 @@ const Link = styled(NavLink)`
   `
 
 const Container = styled.div`
-    height:80vh;
+    height:90vh;
     width:80vw;
     background-color: blue;
     display: grid; 
@@ -47,27 +47,28 @@ const ListItem = styled.li`
     }
 `
 
-function Projects() {
+function Projects(props) {
     const sidebar = useSidebar()
     const toggleSidebar =useSidebarUpdate()
     
+
+    
+    
     useEffect(()=>{
         if(!sidebar) { toggleSidebar()}
-        // eslint-disable-next-line
-    })
-
-    let arr = ['pokemon', 'not pokemon']
-    // let projectString = '<{`Project &{num}`} />'
-
+        console.log(props)
+       //eslint-disable-next-line
+    },[props.data])
 
     return (
         <Router basename='/my-portfolio/projects'>
             <Container>
                 <List>
                     <ListItem>
-                        <Link to = {`/${arr[0]}`}>
-                            <ProjectButton text ='Project One' />
-                        </Link>
+                    {props.data ? 
+                        <Link exact to = {`/${props.data[0].path}`}>
+                            <ProjectButton text ={`${props.data[0].name}`} />
+                        </Link> :null}
                     </ListItem>
 
                     <ListItem>
@@ -88,7 +89,10 @@ function Projects() {
                 </List>
 
                 <Switch>
-                    <Route path= {`/${arr[0]}`} component ={ProjectDisplay}/>
+                    {props.data ? 
+                    <Route exact path = {`/${props.data[0].path}`}>
+                        <ProjectDisplay/>
+                    </Route> :null}
                 </Switch>
             
             </Container>
