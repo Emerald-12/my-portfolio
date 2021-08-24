@@ -3,9 +3,9 @@ import styled, {css} from 'styled-components';
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 
 export const Button = styled.button`
-    background-color: ${props => props.disabled ? "red" : "silver"};
+    background-color: ${props => props.disabled ? "#d5131e" : "silver"};
     color: ${props => props.disabled ? "black" : null};
-    border:${props => props.project ? 'solid black 3px' :'none'} ;
+    border:${props => props.project ? 'solid black 3px': props.disabled ? 'solid black 1px' :'none'} ;
     padding:0;
     margin: 0.5rem auto;
     align-items: center;
@@ -24,9 +24,6 @@ export const Button = styled.button`
         color:white;
         text-decoration: underline;
         background-color:black;
-    }
-
-    * {
     }
 `
 

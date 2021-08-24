@@ -14,8 +14,7 @@ const Link = styled(NavLink)`
 const ListItem = styled.li`
     & :hover {
       background-color:rgba(150, 150, 150);
-      border-radius: 15px;
-      
+      border-radius: 15px;      
       * {
         text-decoration:underline;
       }
@@ -31,11 +30,10 @@ const NavContainer = styled.div`
   position: absolute;
   top:0;
   text-align: center;
-  width: 20%;
+  width: 15%;
   ${props => props.theme}
-  transition: all 1s;
+  transition: all 0.75s;
   height:100vh;
-  
 `
 
 function Nav() {

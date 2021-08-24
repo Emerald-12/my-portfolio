@@ -33,15 +33,35 @@ const Link = styled(NavLink)`
   `
 const Container = styled.div`
     height:90vh;
-    width:110%;
+    /* width:100%; */
     padding-top:1rem;
+    margin-right:2rem;
     display: grid; 
         grid-template-columns: 0.25fr 1fr 1fr; 
-        grid-template-rows: 9fr 1fr; 
-        gap: 10px 10px; 
+        grid-template-rows: 2fr 1fr; 
+        gap: 15px 15px; 
         grid-template-areas: 
             "list iframe iframe"
             "list info1 info2"; 
+`
+const Description = styled.div`
+font-size:1.25rem;
+border-radius:15px;
+padding:8px;
+color:white;
+font-weight:bold;
+font-family:Arial;
+margin:0;
+white-space:pre-wrap;
+
+a{
+    color:black;
+    transition: all 0.25s;
+} a:hover {
+    font-size:130%;
+    transition: all 0.25s;
+}
+
 `
 
 function ProjectList() {
@@ -82,11 +102,13 @@ function ProjectList() {
                     {data.slice(0, 5).map(data =>
                         <Route  key= {data.id} exact path ={`/${data.path}`}>
                             
-                            <iframe style={{gridArea:'iframe'}} src={`${data.url}`} title={`${data.name}`} width='95%' height='100%'></iframe>
+                            <iframe style={{gridArea:'iframe', border:'none', borderRadius:'15px'}} src={`${data.url}`} title={`${data.name}`} width='100%' height='100%'></iframe>
 
-                            <h3 style={{gridArea:'info1', whiteSpace:'pre-wrap'}}>{data.description}</h3>
+                            <Description style={{gridArea:'info1'}}>
+                                <p>{data.description}</p>
+                            </Description>
                             
-                            <h3 style={{gridArea:'info2'}}>Prosjektet ligger tilgjengelig i nåverende tilstand her:<br/> <a href={`${data.url}`} target='_blank' rel="noreferrer">tomkhcoding.github.io/pokemon-search</a></h3>
+                            <Description style={{gridArea:'info2'}}><p>The Project is available, in it's current state, here:<br/> <br/><a href={`${data.url}`} target='_blank' rel="noreferrer">tomkhcoding.github.io/pokemon-search</a></p></Description>
 
                         </Route>
                     )}</Switch>

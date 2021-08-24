@@ -10,13 +10,16 @@ import About from './Components/About'
 
 const ContentContainer = styled.div`
   position: absolute;
-  transition: all 1s;
-  width: ${props => props.theme.width};
-  height: ${props => props.theme.height};
+  transition: all 0.75s;
+  width:85%;
+  height: 100vh;
   left: ${props => props.theme.left};
   padding: '0';
   top: ${props => props.theme.top};
-  border-left: ${props => props.theme.borderLeft};
+  border-left: 2px solid black;
+  opacity:${props=>props.theme.opacity};
+  background: linear-gradient(to bottom right, rgba(60,0,150,1) 0%,rgba(0,220,255,1)  100%);
+  /* background-color:#777777; */
   `
 
 function App() {
@@ -24,20 +27,13 @@ function App() {
   const sidebar = useSidebar()
   const theme = sidebar ? 
   {
-    left:'20%',
-    width:'75vw',
-    height:'100vh',
-    
-    top:'0',
-    borderLeft:'2px solid black'
+    left:'15%',
+    opacity:'1'
   } : 
 
    {
     left:'100%',
-    width:'0',
-    height:'0',
-    
-    top:'0'
+    opacity:'0'
   };
   
   return (
