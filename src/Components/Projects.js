@@ -33,12 +33,12 @@ const Link = styled(NavLink)`
   `
 const Container = styled.div`
     height:90vh;
-    width:80vw;
+    width:110%;
     padding-top:1rem;
     display: grid; 
         grid-template-columns: 0.25fr 1fr 1fr; 
-        grid-template-rows: 2fr 1fr; 
-        gap: 15px 15px; 
+        grid-template-rows: 9fr 1fr; 
+        gap: 10px 10px; 
         grid-template-areas: 
             "list iframe iframe"
             "list info1 info2"; 
@@ -72,7 +72,7 @@ function ProjectList() {
                                     :
                                     <ListItem  key ={data.id}>
                                         <Link  exact to = {`/${data.path}`}>
-                                            <Button><h1>{`${data.name}`}</h1></Button>
+                                            <Button project><h1>{`${data.name}`}</h1></Button>
                                         </Link>
                                     </ListItem>}
                                 </>)}
@@ -84,9 +84,9 @@ function ProjectList() {
                             
                             <iframe style={{gridArea:'iframe'}} src={`${data.url}`} title={`${data.name}`} width='95%' height='100%'></iframe>
 
-                            <h2 style={{gridArea:'info1', whiteSpace:'pre-wrap'}}>{data.description}</h2>
+                            <h3 style={{gridArea:'info1', whiteSpace:'pre-wrap'}}>{data.description}</h3>
                             
-                            <h2 style={{gridArea:'info2'}}>Prosjektet ligger tilgjengelig i nåverende tilstand her: <a href={`${data.url}`} target='_blank' rel="noreferrer">tomkhcoding.github.io/pokemon-search</a></h2>
+                            <h3 style={{gridArea:'info2'}}>Prosjektet ligger tilgjengelig i nåverende tilstand her:<br/> <a href={`${data.url}`} target='_blank' rel="noreferrer">tomkhcoding.github.io/pokemon-search</a></h3>
 
                         </Route>
                     )}</Switch>
