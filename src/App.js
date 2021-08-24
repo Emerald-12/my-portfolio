@@ -16,7 +16,7 @@ const ContentContainer = styled.div`
   left: ${props => props.theme.left};
   padding: '0';
   top: ${props => props.theme.top};
-  border-left: 2px solid black;
+  border-left: 3px solid black;
   opacity:${props=>props.theme.opacity};
   background: linear-gradient(to bottom right, rgba(60,0,150,1) 0%,rgba(0,220,255,1)  100%);
   /* background-color:#777777; */
