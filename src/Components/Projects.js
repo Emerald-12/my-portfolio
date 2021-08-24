@@ -13,12 +13,13 @@ const List = styled.ul`
 `
 const ListItem = styled.li`
     & :hover {
-      background-color:rgba(150, 150, 150);
+      background-color:${props => props.disabled ? "none": "rgba(150, 150, 150)"};
       border-radius: 15px;
-      
-      * {
-        text-decoration:underline;
-      }
+      text-decoration: ${props => props.disabled ? "none": "underline"}; 
+     & * :hover {
+        
+    }
+
     }
 
     & .active {
@@ -33,6 +34,7 @@ const Link = styled(NavLink)`
 const Container = styled.div`
     height:90vh;
     width:80vw;
+    padding-top:1rem;
     display: grid; 
         grid-template-columns: 0.25fr 1fr 1fr; 
         grid-template-rows: 2fr 1fr; 
@@ -62,16 +64,30 @@ function ProjectList() {
                 <Container>
                     <List>
                         {data.slice(0, 5).map(data =>
-                        <ListItem key ={data.id}>
-                            <Link  exact to = {`/${data.path}`}>
-                                {data.state==='disabled' ?<Button disabled><h1>{`${data.name}`}</h1></Button>: <Button><h1>{`${data.name}`}</h1></Button>}
-                            </Link>
-                        </ListItem>)}
+                                <>
+                                    {data.state==='disabled' ?
+                                    <ListItem disabled key ={data.id}>
+                                        <Button disabled><h1>{`${data.name}`}</h1></Button>
+                                    </ListItem>
+                                    :
+                                    <ListItem  key ={data.id}>
+                                        <Link  exact to = {`/${data.path}`}>
+                                            <Button><h1>{`${data.name}`}</h1></Button>
+                                        </Link>
+                                    </ListItem>}
+                                </>)}
                     </List>
+
                    <Switch>
                     {data.slice(0, 5).map(data =>
                         <Route  key= {data.id} exact path ={`/${data.path}`}>
-                            <iframe style={{gridArea:'iframe'}} src={`${data.url}`} title={`${data.name}`} width='99%' height='100%'></iframe>
+                            
+                            <iframe style={{gridArea:'iframe'}} src={`${data.url}`} title={`${data.name}`} width='95%' height='100%'></iframe>
+
+                            <h2 style={{gridArea:'info1', whiteSpace:'pre-wrap'}}>{data.description}</h2>
+                            
+                            <h2 style={{gridArea:'info2'}}>Prosjektet ligger tilgjengelig i nåverende tilstand her: <a href={`${data.url}`} target='_blank' rel="noreferrer">tomkhcoding.github.io/pokemon-search</a></h2>
+
                         </Route>
                     )}</Switch>
                 </Container>

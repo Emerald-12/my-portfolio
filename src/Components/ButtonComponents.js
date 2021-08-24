@@ -1,4 +1,3 @@
-import {useEffect, useState} from 'react'
 // eslint-disable-next-line
 import styled, {css} from 'styled-components';
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
@@ -20,10 +19,7 @@ export const Button = styled.button`
     min-width:200px;
     text-decoration:none;
 
-    & :hover{
-        text-decoration: ${props => props.disabled ? "none": "underline"};
-        
-    }
+    
 
     .active & {
         color:white;

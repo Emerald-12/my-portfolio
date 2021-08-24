@@ -35,6 +35,7 @@ const NavContainer = styled.div`
   ${props => props.theme}
   transition: all 1s;
   height:100vh;
+  
 `
 
 function Nav() {
