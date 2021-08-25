@@ -12,11 +12,12 @@ const List = styled.ul`
     margin: auto 1rem;
 `
 const ListItem = styled.li`
+    padding: 1rem;
+    
     & :hover {
       background-color:${props => props.disabled ? "none": "rgba(150, 150, 150)"};
       border-radius: 15px;
       text-decoration: ${props => props.disabled ? "none": "underline"};
-      size:125%;
     }
 
     & .active {

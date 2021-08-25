@@ -13,7 +13,7 @@ const ContentContainer = styled.div`
   position: absolute;
   transition: all 1s;
   width:85%;
-  height: fill;
+  height: calc(100vh - 2.5rem - 3px);
   left: ${props => props.theme.left};
   padding: 0;
   top: 0;
@@ -30,7 +30,7 @@ function App() {
   const sidebar = useSidebar()
   const theme = sidebar ? 
   {
-    left:'15%',
+    left:'300px',
     opacity:'1',
     borderBottom:'3px solid silver'
   } : 

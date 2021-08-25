@@ -5,10 +5,9 @@ import {faGithub as Git} from '@fortawesome/free-brands-svg-icons'
 const FooterCont = styled.div`
     position:absolute;
     bottom:0;
-    background-color: #171717;
+    background-color: #202020;
     width:100vw;
     height:2.5rem;
-    padding:10px;
 `
 const FooterIcon = styled(FontAwesomeIcon)`
 height:100%;

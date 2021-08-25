@@ -1,26 +1,68 @@
 import image from '../Media/Me.jpg'
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 import {Link} from 'react-router-dom'
-import styled from 'styled-components'
+import styled, {ThemeProvider} from 'styled-components'
 
 const Img = styled.img`
     /* min-width: 5rem; */
-    max-width: 80%;
-    margin: 2rem 0 0.25rem;
+    width: 250px;
+    margin: 1.5rem;
     border-radius: 100%;
+    align-items: center;
 `
+
+const Container = styled.div`
+    position: relative;
+`
+const Overlay = styled.div`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    width: 250px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #aaa9ad99;
+    border-radius: 100%;
+    margin: 1.5rem;
+
+    ${Container} :hover & {
+        ${props=>props.theme}
+    }
+`
+const HomeText = styled.text`
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 32px;
+    color:#171717;
+
+`
+
 
 function Picture() {
 
     const sidebar = useSidebar()
     const toggleSidebar =useSidebarUpdate()
+    const theme = sidebar ? {opacity: '1'} : {opacity:'0'}
 
     return (
-        <div>
-            <Link to='/'>
-            <Img src = {image} alt='' onClick={sidebar ? toggleSidebar : undefined}/>
-            </Link>
-        </div>
+        <ThemeProvider theme={theme}>
+            <Container>
+                <Link to='/'>
+                    <Img src = {image} alt='' />
+                    <Overlay onClick={sidebar ? toggleSidebar : undefined}>
+                        <HomeText>Home</HomeText>
+                    </Overlay>
+                </Link>
+            </Container>
+        </ThemeProvider>
     )
 }
 
