@@ -24,6 +24,7 @@ export const Button = styled.button`
         color:white;
         text-decoration: underline;
         background-color:black;
+        border: 2px solid silver;
     }
 `
 

@@ -8,8 +8,12 @@ export default createGlobalStyle`
 
     body{
         margin: 0;
-        padding: 0;
         overflow-x: hidden;
+        position:relative;
+        min-height:100vh;
+        width:100vw;
+        padding:0;
+        background-color: #171717;
     }
 
     ul {
