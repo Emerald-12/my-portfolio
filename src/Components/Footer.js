@@ -27,7 +27,7 @@ color:white;
 padding:0 ;
 margin:0;
 grid-area: github;
-align-self:center;
+
 
 
 :hover{
@@ -53,7 +53,8 @@ const FooterCopy = styled.p`
 
 `
 const FooterLink = styled.a`
-
+align-self:center;
+justify-self: center;
 `
 
 export default function Footer() {
