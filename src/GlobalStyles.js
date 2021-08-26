@@ -4,6 +4,11 @@ import {createGlobalStyle} from 'styled-components'
 export default createGlobalStyle`
     root{
         box-sizing: border-box;
+        
+    }
+
+    html {
+        font-family: arial;
     }
 
     body{

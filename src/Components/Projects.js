@@ -48,7 +48,6 @@ border-radius:15px;
 padding:8px;
 color:white;
 font-weight:bold;
-font-family:Arial;
 margin:0;
 white-space:pre-wrap;
 

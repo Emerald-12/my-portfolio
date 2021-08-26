@@ -1,6 +1,6 @@
 import image from '../Media/Me.jpg'
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
-import {NavLink, useLocation, useHistory} from 'react-router-dom'
+import { useLocation, useHistory} from 'react-router-dom'
 import styled, {ThemeProvider} from 'styled-components'
 import React, { useEffect, useCallback} from 'react'
 
@@ -13,12 +13,6 @@ const Img = styled.img`
     align-items: center;
     z-index:-1;
 `
-const Link = styled(NavLink)`
-  text-decoration:none;
-   & a{
-       display:none;
-   }
-  `
 
 const Container = styled.div`
     position: relative;

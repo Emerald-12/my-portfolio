@@ -8,6 +8,7 @@ import NavComp from './Components/NavComp';
 import Projects from './Components/Projects';
 import About from './Components/About'
 import Footer from './Components/Footer'
+import Contact from './Components/Contact'
 
 const ContentContainer = styled.div`
   position: absolute;
@@ -60,6 +61,10 @@ function App() {
 
                   <Route path = '/about'>
                     <About />
+                  </Route>
+
+                  <Route path = '/contact'>
+                    <Contact />
                   </Route>
 
                 </Switch>

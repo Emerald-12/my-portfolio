@@ -13,7 +13,7 @@ const FooterCont = styled.div`
     padding:0;
     margin:0;
     display: grid;
-        grid-template-columns: 0.5fr  2.5rem 2fr;
+        grid-template-columns: 300px  2.5rem 2fr;
         grid-template-rows: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;

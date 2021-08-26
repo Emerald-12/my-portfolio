@@ -55,7 +55,9 @@ function Nav() {
             </ListItem>
 
             <ListItem>
-              <MainButton text = 'About'/>
+              <Link to='/about'>
+                <MainButton text = 'About'/>
+              </Link>
             </ListItem>
 
             <ListItem>
@@ -63,7 +65,9 @@ function Nav() {
             </ListItem>
 
             <ListItem>
-              <MainButton text = 'Contact'/>
+              <Link to='/contact'>
+                <MainButton text = 'Contact'/>
+              </Link>
             </ListItem>
 
           </ul>
