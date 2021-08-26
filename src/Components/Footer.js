@@ -23,7 +23,7 @@ const FooterCont = styled.div`
 const FooterIcon = styled(FontAwesomeIcon)`
 height:2rem;
 width:2.5rem;
-color:white;
+color:silver;
 padding:0 ;
 margin:0;
 grid-area: github;
@@ -31,8 +31,8 @@ grid-area: github;
 
 
 :hover{
-    filter:invert();
-    background-color: black;
+    background-color: silver;
+    color:black;
     border-radius:100%;
 }
 `
