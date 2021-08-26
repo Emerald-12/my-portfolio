@@ -1,6 +1,6 @@
 import image from '../Media/Me.jpg'
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import styled, {ThemeProvider} from 'styled-components'
 
 const Img = styled.img`
@@ -10,6 +10,12 @@ const Img = styled.img`
     border-radius: 100%;
     align-items: center;
 `
+const Link = styled(NavLink)`
+  text-decoration:none;
+   & a{
+       display:none;
+   }
+  `
 
 const Container = styled.div`
     position: relative;
@@ -30,6 +36,9 @@ const Overlay = styled.div`
 
     ${Container} :hover & {
         ${props=>props.theme}
+        /* pointer-events:none; */
+        user-select:none;
+        cursor:default;
     }
 `
 const HomeText = styled.text`
@@ -42,18 +51,19 @@ const HomeText = styled.text`
     text-align: center;
     font-size: 32px;
     color:#171717;
-
 `
 
 
 function Picture() {
+    
 
     const sidebar = useSidebar()
     const toggleSidebar =useSidebarUpdate()
-    const theme = sidebar ? {opacity: '1'} : {opacity:'0'}
+    const themeOn = {opacity: '1'} 
+    const themeOff = {opacity:'0'}
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={sidebar ? themeOn : themeOff}>
             <Container>
                 <Link to='/'>
                     <Img src = {image} alt='' />
