@@ -1,7 +1,9 @@
 import image from '../Media/Me.jpg'
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useLocation} from 'react-router-dom'
 import styled, {ThemeProvider} from 'styled-components'
+import React, { useEffect } from 'react'
+
 
 const Img = styled.img`
     /* min-width: 5rem; */
@@ -39,6 +41,7 @@ const Overlay = styled.div`
         /* pointer-events:none; */
         user-select:none;
         cursor:default;
+        left:0;
     }
 `
 const HomeText = styled.text`
@@ -56,14 +59,21 @@ const HomeText = styled.text`
 
 function Picture() {
     
-
+    const [useCurrentTheme, setCurrentTheme] = React.useState({})
     const sidebar = useSidebar()
     const toggleSidebar =useSidebarUpdate()
+
     const themeOn = {opacity: '1'} 
     const themeOff = {opacity:'0'}
-
+        let location = useLocation();
+        React.useEffect(() => {
+            console.log(location.pathname)
+          if (location.pathname === '/') {
+              setCurrentTheme(themeOff)} else {setCurrentTheme(themeOn)}
+            }, [location]);
+   
     return (
-        <ThemeProvider theme={sidebar ? themeOn : themeOff}>
+        <ThemeProvider theme={useCurrentTheme}>
             <Container>
                 <Link to='/'>
                     <Img src = {image} alt='' />
