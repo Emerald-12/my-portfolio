@@ -66,10 +66,11 @@ function Picture() {
     const themeOn = {opacity: '1'} 
     const themeOff = {opacity:'0'}
         let location = useLocation();
-        React.useEffect(() => {
+        useEffect(() => {
             console.log(location.pathname)
           if (location.pathname === '/') {
               setCurrentTheme(themeOff)} else {setCurrentTheme(themeOn)}
+              // eslint-disable-next-line
             }, [location]);
    
     return (

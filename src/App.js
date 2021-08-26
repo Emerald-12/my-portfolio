@@ -18,11 +18,18 @@ const ContentContainer = styled.div`
   padding: 0;
   top: 0;
   border-left: 3px solid silver;
-  border-bottom:${props=>props.theme.borderBottom};
+  border-bottom: 3px solid silver;
   opacity:${props=>props.theme.opacity};
   background: linear-gradient(to bottom right, rgba(60,0,150,1) 0%,rgba(0,220,255,1)  100%);
   /* background-color:#777777; */
   `
+
+const FooterWrapper = styled.div`
+  position: absolute;
+  bottom:0;
+  width:100%;
+  padding-bottom:1px;
+`
  
 
 function App() {
@@ -32,13 +39,11 @@ function App() {
   {
     left:'300px',
     opacity:'1',
-    borderBottom:'3px solid silver'
   } : 
 
    {
     left:'100%',
     opacity:'0',
-    borderBottom:'0'
   };
   
   return (
@@ -60,7 +65,9 @@ function App() {
                 </Switch>
               </ContentContainer>
             </ThemeProvider>
-            <Footer />
+            <FooterWrapper>
+              <Footer />
+            </FooterWrapper>
         </Router>
   );
 }

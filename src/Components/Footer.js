@@ -2,19 +2,49 @@ import styled from 'styled-components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGithub as Git} from '@fortawesome/free-brands-svg-icons'
 
+
 const FooterCont = styled.div`
     position:absolute;
     bottom:0;
+    left:0;
     background-color: #202020;
-    width:100vw;
+    width:100%;
     height:2.5rem;
+    padding:0;
+    margin:0;
+    display: grid;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "copyright github something";
 `
 const FooterIcon = styled(FontAwesomeIcon)`
 height:100%;
 width:auto;
 color:white;
+padding:0;
+margin:0;
+grid-area: github;
 `
+
+// .something { grid-area: something; }
+
+
+
+
 const FooterCopy = styled.p`
+    grid-area: copyright;
+    margin:0;
+    /* padding: 0;  */
+    color:silver;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self:center;
+
+`
+const FooterLink = styled.a`
 
 `
 
@@ -22,8 +52,10 @@ export default function Footer() {
 
     return (
         <FooterCont>
-            <FooterIcon icon={Git} size='2x'/>
-            {/* <FooterCopy text={'&copy;'}/> */}
+            <FooterLink href={`https://github.com/tomkhcoding`} target='_blank' rel="noreferrer">
+                <FooterIcon icon={Git} size='2x'></FooterIcon>
+            </FooterLink>
+            <FooterCopy>&copy; Tom Knutsen 2021</FooterCopy>
         </FooterCont>
     )
 }

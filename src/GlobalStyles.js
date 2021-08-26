@@ -11,7 +11,7 @@ export default createGlobalStyle`
         overflow-x: hidden;
         position:relative;
         min-height:100vh;
-        width:100vw;
+        min-width:100%;
         padding:0;
         background-color: #171717;
     }

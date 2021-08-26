@@ -4,7 +4,7 @@ import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 // eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Redirect, NavLink} from 'react-router-dom';
 // eslint-disable-next-line
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 import {Button} from './ButtonComponents';
 const List = styled.ul`
