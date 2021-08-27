@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-rou
 import {useSidebar} from './SidebarContext';
 import styled, {ThemeProvider} from "styled-components";
 import GlobalStyles from "./GlobalStyles";
+import { useHistory } from 'react-router';
 
-import NavComp from './Components/NavComp';
-import Projects from './Components/Projects';
-import About from './Components/About'
-import Footer from './Components/Footer'
-import Contact from './Components/Contact'
+
+// eslint-disable-next-line
+import Mobile from './Components/Mobile';
+// eslint-disable-next-line
+import { useEffect } from 'react';
+import Home from './Components/Home';
 
 const ContentContainer = styled.div`
   position: absolute;
@@ -46,34 +48,30 @@ function App() {
     left:'100%',
     opacity:'0',
   };
+
+  const mq = (window.matchMedia('(max-width: 769px)'))
+
+  let history = useHistory()
+
+  function RedirectMobile() {
+    let history = useHistory();
+    history.replace('/m/')
+  }
+
+  if (mq.matches && window.location.pathname !== '/m/')  {
+    RedirectMobile()
+  }
   
   return (
-        <Router basename='/my-portfolio'>
-          <GlobalStyles/>
-            <NavComp/>
-            <ThemeProvider theme={theme}>
-              <ContentContainer>
-                <Switch>
-
-                  <Route path ='/projects'>
-                    <Projects />
-                  </Route>
-
-                  <Route path = '/about'>
-                    <About />
-                  </Route>
-
-                  <Route path = '/contact'>
-                    <Contact />
-                  </Route>
-
-                </Switch>
-              </ContentContainer>
-            </ThemeProvider>
-            <FooterWrapper>
-              <Footer />
-            </FooterWrapper>
-        </Router>
+        
+    <div>
+        <GlobalStyles/>
+      <Switch>
+        <Route exact path ='/' component={Home}/>
+        <Route exact path='/m/' component={Mobile}/>
+      </Switch>
+    </div>
+        
   );
 }
 

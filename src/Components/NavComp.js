@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom'
 // eslint-disable-next-line
 import styled, {css, ThemeProvider} from 'styled-components';
 // import MainButton from './ButtonComponents';
+import { useEffect } from 'react';
 
 import Title from './Title'
 import Picture from './Picture'
@@ -37,9 +38,12 @@ const NavContainer = styled.div`
   height:fill;
 `
 
+
 function Nav() {
     const sidebar = useSidebar()
     const theme = sidebar ? {left: '0%'} : {left:'40%'}
+
+    
     
     return (
       <ThemeProvider theme ={theme}>
