@@ -11,6 +11,8 @@ import Mobile from './Components/Mobile';
 // eslint-disable-next-line
 import { useEffect } from 'react';
 import Home from './Components/Home';
+import Footer from './Components/Footer'
+
 
 const ContentContainer = styled.div`
   position: absolute;
@@ -65,11 +67,13 @@ function App() {
   return (
         
     <div>
-        <GlobalStyles/>
+      <GlobalStyles/>
       <Switch>
         <Route exact path ='/' component={Home}/>
         <Route exact path='/m/' component={Mobile}/>
       </Switch>
+
+      
     </div>
         
   );

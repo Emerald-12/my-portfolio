@@ -55,12 +55,13 @@ export default function Home() {
                     <Route  path = '/about' component = {About}/>
                     <Route  path = '/contact' component = {Contact} />
                     </ContentContainer>
-                <FooterWrapper>
-                    <Footer />
-                </FooterWrapper>
                 </Switch>
                 </ThemeProvider>
+                
             </Router>
+            <FooterWrapper>
+                <Footer />
+            </FooterWrapper>
         </div>
     )
 }
