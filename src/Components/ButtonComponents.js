@@ -32,6 +32,6 @@ export function MainButton(props) {
     const sidebar = useSidebar()
     const toggleSidebar =useSidebarUpdate()
     return(
-        <Button onClick={!sidebar ? toggleSidebar : undefined}><h1>{props.text}</h1></Button>
+        <Button onClick={!sidebar && !props.mobile ? toggleSidebar : undefined}><h1>{props.text}</h1></Button>
         )
     }

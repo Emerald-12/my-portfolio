@@ -7,8 +7,7 @@ import Contact from './Contact';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {useSidebar} from '../SidebarContext';
 import styled, {ThemeProvider} from "styled-components";
-import GlobalStyles from "../GlobalStyles";
-import { useHistory } from 'react-router';
+
 const FooterWrapper = styled.div`
   position: absolute;
   bottom:0;
