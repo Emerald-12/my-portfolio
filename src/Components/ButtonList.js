@@ -10,7 +10,8 @@ const Link = styled(NavLink)`
 const ListItem = styled.li`
   padding: 1rem;
   @media (max-width: 769px) {
-    margin-top:35%;
+    margin-top:25%;
+    padding: 0 1rem;
   }
   & :hover {
       background-color:rgba(150, 150, 150);
@@ -29,25 +30,27 @@ const ListItem = styled.li`
 
 export default function ButtonList(props) {
     return (
-            <ul style={{height:'100%'}}>
+            <ul style={{ padding:'0', margin:'0', alignItems:'center'}}>
                 <ListItem>
-                  <Link to='/projects'>
+                  <Link to={props.mobile ? '/m/projects' : '/projects'}>
                     <MainButton mobile = {props.mobile} text = 'Projects'/>
                   </Link>
                 </ListItem>
                 
                 <ListItem>
-                  <Link to='/about'>
+                  <Link to={props.mobile ? '/m/about' : '/about'}>
                     <MainButton mobile = {props.mobile} text = 'About'/>
                   </Link>
                 </ListItem>
 
                 <ListItem>
-                  <MainButton mobile = {props.mobile} text = 'CV'/>
+                  <Link to={props.mobile ? '/m/cv' : '/cv'}>
+                    <MainButton mobile = {props.mobile} text = 'CV'/>
+                  </Link>
                 </ListItem>
 
                 <ListItem>
-                  <Link to='/contact'>
+                  <Link to={props.mobile ? '/m/contact' : '/contact'}>
                     <MainButton mobile = {props.mobile} text = 'Contact'/>
                   </Link>
                 </ListItem>

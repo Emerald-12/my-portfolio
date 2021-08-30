@@ -18,7 +18,7 @@ const FooterCont = styled.div`
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-        "copyright github something ";
+            "copyright github something ";
 `
 const FooterIcon = styled(FontAwesomeIcon)`
 height:2rem;
