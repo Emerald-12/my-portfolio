@@ -4,7 +4,7 @@ import About from './About'
 import Footer from './Footer'
 import Contact from './Contact';
 // eslint-disable-next-line
-import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {useSidebar} from '../SidebarContext';
 import styled, {ThemeProvider} from "styled-components";
 
@@ -43,9 +43,10 @@ export default function Home() {
     left:'100%',
     opacity:'0',
   };
+  
     return(
         <div>
-            <Router basename ='/my-portfolio'>
+            <Router >
                 <NavComp />
                 <ThemeProvider theme={theme}>
                 <Switch >

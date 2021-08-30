@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import styled from 'styled-components';
 
 import Title from './Title'
@@ -7,6 +7,7 @@ import image from '../Media/Me.jpg'
 import Footer from './Footer'
 import MobileNav from './MobileNav';
 import Hamburger from './Hamburger'
+import MProjects from './MobileProjects';
 
 
 
@@ -40,14 +41,23 @@ grid-area:title;
 export default function MobileHome() {
 
     return (
-        <Router exact path='my-portfolio/m/' basename='my-portfolio'>
-            <HomeContainer>
-                <Hamburger />
-                <MobileNav />
-                <Img src = {image} alt='' />
-                <StyledTitle />
-                <Footer />
-            </HomeContainer>
-        </Router>
+            <Router >
+                <HomeContainer>
+                    <Hamburger />
+                    <MobileNav />
+                    <Switch>
+                        <Route exact path ='/'>
+                            <Img src = {image} alt='A handsome Tom' />
+                            <StyledTitle />
+                        </Route>
+                        
+                        <Route  path='/projects' component={MProjects}/>
+                        {/* <Route exact path='/m/about' />
+                        <Route exact path='/m/cv' />
+                        <Route exact path='/m/contact' /> */}
+                    </Switch>
+                    <Footer />
+                </HomeContainer>
+            </Router> 
     )
 }

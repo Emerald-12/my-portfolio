@@ -32,7 +32,7 @@ export default function MobileNav() {
         <>
         <ThemeProvider theme={theme}>
             <ButtonOverlay>
-                <ButtonList mobile={false}/>
+                <ButtonList mobile={true}/>
             </ButtonOverlay>
         </ThemeProvider>
         </>

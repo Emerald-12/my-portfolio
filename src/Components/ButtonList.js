@@ -29,10 +29,11 @@ const ListItem = styled.li`
 `
 
 export default function ButtonList(props) {
+  console.log(props)
     return (
             <ul style={{ padding:'0', margin:'0', alignItems:'center'}}>
                 <ListItem>
-                  <Link to={props.mobile ? '/m/projects' : '/projects'}>
+                  <Link to={props.mobile ? '/projects' : '/projects'}>
                     <MainButton mobile = {props.mobile} text = 'Projects'/>
                   </Link>
                 </ListItem>

@@ -2,7 +2,7 @@ import {useEffect} from 'react'
 import { useFetch } from 'react-async';
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 // eslint-disable-next-line
-import { BrowserRouter as Router, Switch, Route, Redirect, NavLink} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect, NavLink} from 'react-router-dom';
 // eslint-disable-next-line
 import styled from 'styled-components';
 
@@ -77,7 +77,7 @@ function ProjectList() {
         if (error) return error.message
         if (data)  return (
             
-            <Router basename='/my-portfolio/projects'>
+            <Router basename='/projects'>
                 <Container>
                     <List>
                         {data.slice(0, 5).map(data =>

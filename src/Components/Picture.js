@@ -79,7 +79,6 @@ function Picture() {
               setCurrentTheme(themeOff)}
               if(location.pathname !=='/') {
                   setCurrentTheme(themeOn)
-                console.log('kuk')
                 console.log(useCurrentTheme)}
               // eslint-disable-next-line
             }, [location]);

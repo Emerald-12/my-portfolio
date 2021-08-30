@@ -8,7 +8,7 @@ import {SidebarProvider} from './SidebarContext'
 
 ReactDOM.render(
       <SidebarProvider>
-        <Router basename='/my-portfolio'>
+        <Router basename='/my-portfolio' hashType='slash'>
           <App />
         </Router>
       </SidebarProvider>,
