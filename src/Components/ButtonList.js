@@ -4,57 +4,58 @@ import styled from 'styled-components';
 
 import {MainButton} from './ButtonComponents';
 
+const ButtonCont = styled.div`
+display:grid;
+padding:0;
+margin:0;
+align-items:'center';
+gap: 25px 0;
+margin-top: 20%;
+`
+
 const Link = styled(NavLink)`
+width:75%;
+justify-self:center;
+@media (max-width: 769px) {
+  padding: 0 1rem;
+}
+& :hover {
+    background-color:rgba(150, 150, 150);
+    border-radius: 15px;      
+    * {
+      text-decoration:underline;
+    }
+  }
+
+  & .active {
+    pointer-events:none;
+    user-select:none;
+    cursor:default;
+  }
   text-decoration:none;
 `
-const ListItem = styled.li`
-  padding: 0.5rem;
-  @media (max-width: 769px) {
-    margin-top:25%;
-    padding: 0 1rem;
-  }
-  & :hover {
-      background-color:rgba(150, 150, 150);
-      border-radius: 15px;      
-      * {
-        text-decoration:underline;
-      }
-    }
 
-    & .active {
-      pointer-events:none;
-      user-select:none;
-      cursor:default;
-    }
-`
 
 export default function ButtonList(props) {
   console.log(props)
     return (
-            <ul style={{ padding:'0', margin:'0', alignItems:'center'}}>
-                <ListItem>
-                  <Link to={props.mobile ? '/projects' : '/projects'}>
+            <ButtonCont >
+                  
+                  {props.mobile ?<Link exact to ='/'>
+                    <MainButton mobile = {props.mobile} text = 'Home'/>
+                  </Link>: null}
+
+                  <Link to='/projects'>
                     <MainButton mobile = {props.mobile} text = 'Projects'/>
                   </Link>
-                </ListItem>
                 
-                <ListItem>
-                  <Link to={props.mobile ? '/m/about' : '/about'}>
+                  <Link to='/about'>
                     <MainButton mobile = {props.mobile} text = 'About'/>
                   </Link>
-                </ListItem>
 
-                <ListItem>
-                  <Link to={props.mobile ? '/m/cv' : '/cv'}>
-                    <MainButton mobile = {props.mobile} text = 'CV'/>
-                  </Link>
-                </ListItem>
-
-                <ListItem>
-                  <Link to={props.mobile ? '/m/contact' : '/contact'}>
+                  <Link to='/contact'>
                     <MainButton mobile = {props.mobile} text = 'Contact'/>
                   </Link>
-                </ListItem>
-              </ul>
+              </ButtonCont>
     )
 }
