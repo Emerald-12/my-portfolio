@@ -17,7 +17,8 @@ const FooterWrapper = styled.div`
 const ContentContainer = styled.div`
   position: absolute;
   transition: all 1s;
-  width:85%;
+  /* max-width: fill; */
+  width:stretch;
   height: calc(100vh - 2.5rem - 3px);
   left: ${props => props.theme.left};
   padding: 0;

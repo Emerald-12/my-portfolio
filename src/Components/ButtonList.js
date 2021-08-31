@@ -8,7 +8,7 @@ const Link = styled(NavLink)`
   text-decoration:none;
 `
 const ListItem = styled.li`
-  padding: 1rem;
+  padding: 0.5rem;
   @media (max-width: 769px) {
     margin-top:25%;
     padding: 0 1rem;

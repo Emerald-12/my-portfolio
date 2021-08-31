@@ -8,7 +8,7 @@ import React, { useEffect, useCallback} from 'react'
 const Img = styled.img`
     /* min-width: 5rem; */
     width: 250px;
-    margin: 1.5rem;
+    /* margin: 1.5rem; */
     border-radius: 100%;
     align-items: center;
     z-index:-1;
@@ -30,7 +30,7 @@ const Overlay = styled.div`
     transition: .5s ease;
     background-color: #aaa9ad99;
     border-radius: 100%;
-    margin: 1.5rem;
+    /* margin: 1.5rem; */
     z-index:1;
 
     :hover {

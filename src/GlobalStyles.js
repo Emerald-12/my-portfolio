@@ -14,6 +14,7 @@ export default createGlobalStyle`
     body{
         margin: 0;
         overflow-x: hidden;
+        overflow-y: hidden;
         position:relative;
         min-height:100vh;
         min-width:100%;

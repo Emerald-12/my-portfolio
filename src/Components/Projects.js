@@ -35,7 +35,7 @@ const Container = styled.div`
     padding-top:1rem;
     margin-right:2rem;
     display: grid; 
-        grid-template-columns: 0.25fr 1fr 1fr; 
+        grid-template-columns: 0.25fr 0.25fr 1fr; 
         grid-template-rows: 2fr 1fr; 
         gap: 15px 15px; 
         grid-template-areas: 
@@ -50,6 +50,7 @@ color:white;
 font-weight:bold;
 margin:0;
 white-space:pre-wrap;
+width:400px;
 
 a{
     color:black;
@@ -99,7 +100,7 @@ function ProjectList() {
                     {data.slice(0, 5).map(data =>
                         <Route  key= {data.id} exact path ={`/${data.path}`}>
                             
-                            <iframe style={{gridArea:'iframe', border:'none', borderRadius:'15px'}} src={`${data.url}`} title={`${data.name}`} width='100%' height='100%'></iframe>
+                            <iframe style={{gridArea:'iframe', border:'none', borderRadius:'15px'}} src={`${data.url}`} title={`${data.name}`} width='75%' height='100%' scrolling='no'></iframe>
 
                             <Description style={{gridArea:'info1'}}>
                                 <p>{data.description}</p>

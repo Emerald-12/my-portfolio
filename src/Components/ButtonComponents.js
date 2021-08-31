@@ -6,7 +6,7 @@ export const Button = styled.button`
     background-color: ${props => props.disabled ? "#d5131e" : "silver"};
     color: ${props => props.disabled ? "black" : null};
     border:${props => props.project ? 'solid black 3px': props.disabled ? 'solid black 1px' :'none'} ;
-    margin: auto;
+    margin: 0;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,7 @@ export const Button = styled.button`
     width: 100%;
     min-height:100%;
     min-width:150px;
+    padding:0;
 
     text-decoration:none;
     font-size:0.75em;
