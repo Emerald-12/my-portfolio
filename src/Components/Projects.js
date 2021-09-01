@@ -7,31 +7,39 @@ import { HashRouter as Router, Switch, Route, Redirect, NavLink} from 'react-rou
 import styled from 'styled-components';
 
 import {Button} from './ButtonComponents';
-const List = styled.ul`
+const Link = styled(NavLink)`
+  text-decoration:none;`
+const ButtonCont = styled.div`
     grid-area: list;
-    margin: auto 1rem;
-`
-const ListItem = styled.li`
-    padding: 1rem;
+    display:grid;
+    align-items:'center';
+    gap: 15px 0;
+    margin: 50% 0;
+    width:225px;
+    padding-left: 15px;
+    height:60vh;
+
+    ${Button},${Link}, * ${Button} {
+        min-height:0;
+        height: 100px;}
+
     
-    & :hover {
+     ${Link}:hover ${Button}{
       background-color:${props => props.disabled ? "none": "rgba(150, 150, 150)"};
       border-radius: 15px;
       text-decoration: ${props => props.disabled ? "none": "underline"};
     }
 
-    & .active {
+    * .active {
       pointer-events:none;
       user-select:none;
       cursor:default;
     }
-`
-const Link = styled(NavLink)`
-  text-decoration:none;
+
   `
 const Container = styled.div`
     height:90vh;
-    /* width:100%; */
+    max-width: calc(100vw - 300px);
     padding-top:1rem;
     margin-right:2rem;
     display: grid; 
@@ -80,27 +88,24 @@ function ProjectList() {
             
             <Router basename='/projects'>
                 <Container>
-                    <List>
+                    <ButtonCont>
                         {data.slice(0, 5).map(data =>
-                                <>
-                                    {data.state==='disabled' ?
-                                    <ListItem disabled key ={data.id}>
-                                        <Button disabled><h1>{`${data.name}`}</h1></Button>
-                                    </ListItem>
-                                    :
-                                    <ListItem  key ={data.id}>
-                                        <Link  exact to = {`/${data.path}`}>
-                                            <Button project><h1>{`${data.name}`}</h1></Button>
-                                        </Link>
-                                    </ListItem>}
-                                </>)}
-                    </List>
+                            <>
+                                {data.state==='disabled' ?
+                                <Button disabled key={data.id}><h1>{`${data.name}`}</h1></Button>
+                                :
+                                <Link key ={data.id} exact to = {`/${data.path}`}>
+                                    <Button project><h1>{`${data.name}`}</h1></Button>
+                                </Link>
+                                }
+                            </>)}
+                    </ButtonCont>
 
                    <Switch>
                     {data.slice(0, 5).map(data =>
                         <Route  key= {data.id} exact path ={`/${data.path}`}>
                             
-                            <iframe style={{gridArea:'iframe', border:'none', borderRadius:'15px'}} src={`${data.url}`} title={`${data.name}`} width='75%' height='100%' scrolling='no'></iframe>
+                            <iframe style={{gridArea:'iframe', border:'none', borderRadius:'15px'}} src={`${data.url}`} title={`${data.name}`} width='100%' height='100%' scrolling='no'></iframe>
 
                             <Description style={{gridArea:'info1'}}>
                                 <p>{data.description}</p>

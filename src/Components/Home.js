@@ -17,8 +17,8 @@ const FooterWrapper = styled.div`
 const ContentContainer = styled.div`
   position: absolute;
   transition: all 1s;
-  /* max-width: fill; */
   width:stretch;
+  max-width: calc(100vw - 300px);
   height: calc(100vh - 2.5rem - 3px);
   left: ${props => props.theme.left};
   padding: 0;
@@ -33,7 +33,7 @@ const ContentContainer = styled.div`
 
 
 export default function Home() {
-    const sidebar = useSidebar()
+  const sidebar = useSidebar()
   const theme = sidebar ? 
   {
     left:'300px',
