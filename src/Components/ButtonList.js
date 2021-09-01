@@ -9,15 +9,16 @@ display:grid;
 padding:0;
 margin:0;
 align-items:'center';
-gap: 25px 0;
+gap: 30% 0;
 margin-top: 20%;
+align-content: center;
+justify-content: center;
 `
 
 const Link = styled(NavLink)`
 width:75%;
-justify-self:center;
+/* justify-self:center; */
 @media (max-width: 769px) {
-  padding: 0 1rem;
 }
 & :hover {
     background-color:rgba(150, 150, 150);

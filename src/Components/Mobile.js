@@ -39,6 +39,7 @@ grid-area:title;
 
 
 export default function MobileHome() {
+    
 
     return (
             <Router >
