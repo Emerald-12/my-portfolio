@@ -43,7 +43,7 @@ const Container = styled.div`
     padding-top:1rem;
     margin-right:2rem;
     display: grid; 
-        grid-template-columns: 0.25fr 0.25fr 1fr; 
+        grid-template-columns: 0.25fr 1fr 1fr; 
         grid-template-rows: 2fr 1fr; 
         gap: 15px 15px; 
         grid-template-areas: 
@@ -58,7 +58,7 @@ color:white;
 font-weight:bold;
 margin:0;
 white-space:pre-wrap;
-width:400px;
+/* width:400px; */
 
 a{
     color:black;

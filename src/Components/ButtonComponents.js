@@ -13,9 +13,9 @@ export const Button = styled.button`
     text-align: center;
     border-radius: 15px;
     width: 100%;
-    min-height:100%;
-    min-width:150px;
-    padding:0;
+    height:fit-content;
+    padding:5px;
+    width:200px;
 
     text-decoration:none;
     font-size:0.75em;
