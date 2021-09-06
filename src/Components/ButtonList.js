@@ -17,6 +17,7 @@ height: stretch;
 @media (max-width: 769px) {
   height:auto;
   gap: 30% 0;
+  margin-top:50%;
 }
 `
 

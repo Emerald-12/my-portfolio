@@ -39,6 +39,7 @@ export function MainButton(props) {
     const sidebar = useSidebar()
     const toggleSidebar =useSidebarUpdate()
     return(
-        <Button onClick={!sidebar && !props.mobile ? toggleSidebar : undefined}><h1>{props.text}</h1></Button>
+        //enables desired home button function by disabling sidebartoggle when true
+        <Button draggable="false" onClick={(!sidebar && !props.mobile) || props.mobile ? toggleSidebar : undefined}><h1>{props.text}</h1></Button>
         )
     }
