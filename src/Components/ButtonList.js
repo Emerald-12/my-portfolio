@@ -15,9 +15,9 @@ align-content: center;
 justify-content: center;
 height: stretch;
 @media (max-width: 769px) {
-  height:auto;
-  gap: 30% 0;
-  margin-top:50%;
+  height:90vh;
+  gap: 10% 0;
+  margin-top:0%;
 }
 `
 
