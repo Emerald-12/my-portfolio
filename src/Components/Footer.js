@@ -4,7 +4,7 @@ import {faGithub as Git} from '@fortawesome/free-brands-svg-icons'
 
 
 const FooterCont = styled.div`
-    /* position:absolute; */
+    position:absolute;
     bottom:0;
     left:0;
     background-color: #202020;

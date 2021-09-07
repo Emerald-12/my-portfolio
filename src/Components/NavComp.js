@@ -15,6 +15,7 @@ const NavContainer = styled.div`
   ${props => props.theme}
   transition: all 1s;
   height:fill;
+  padding-top:5rem;
 `
 
 

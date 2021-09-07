@@ -9,7 +9,7 @@ const Bars = styled(FontAwesomeIcon)`
 
 const HamCont = styled.div`
     z-index:1;
-    position: absolute;
+    position: fixed;
     top:0;
     right:0;
     color:white;

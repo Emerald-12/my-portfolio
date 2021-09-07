@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-export default function Contact() {
-
     const Container = styled.div`
         display: grid; 
             grid-template-columns: 1fr 1fr 1fr; 
@@ -25,6 +23,9 @@ export default function Contact() {
     const ContactLink = styled.a`
         color: silver;
     `
+
+export default function Contact() {
+
 
     return (
         <Container>

@@ -5,9 +5,9 @@ import { useSidebar } from '../SidebarContext';
 
 
 const ButtonOverlay = styled.div`
-    position:absolute;
+    position:fixed;
     transition: all 1s;
-    height: 100%;
+    height: 100vh;
     background-color: black;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);

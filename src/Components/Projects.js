@@ -58,7 +58,6 @@ color:white;
 font-weight:bold;
 margin:0;
 white-space:pre-wrap;
-/* width:400px; */
 
 a{
     color:black;
@@ -80,7 +79,7 @@ function ProjectList() {
         },[])
 
     const Projects = ()=>{
-        const {data, error} = useFetch(`https://tomkhcoding.github.io/api/projects.json`, {
+        const {data, error} = useFetch(`https://tomkhcoding.github.io/api/projects/projects.json`, {
             headers: { accept: "application/json" },
           })
         if (error) return error.message
