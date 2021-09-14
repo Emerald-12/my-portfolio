@@ -1,9 +1,8 @@
 // eslint-disable-next-line
-import { HashRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Link, Redirect, useHistory} from 'react-router-dom';
 // eslint-disable-next-line
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
-import { useHistory } from 'react-router';
 
 
 // eslint-disable-next-line

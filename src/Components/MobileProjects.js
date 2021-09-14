@@ -13,15 +13,14 @@ const Container = styled.div`
 const Image = styled.img`
     height:600px;
     align-self:center;
-    justify-self:center;
-    
-    `
+    justify-self:center;   
+`
 
 const Wrap = styled.div`
-    margin:1.5rem 25px;
+    margin:5rem 25px;
     background-color: #252525;
     border-radius:15px;
-    `
+`
 const Description = styled.div`
         font-size:14px;
         border-radius:15px;
@@ -34,7 +33,7 @@ const Description = styled.div`
             color:white;
             text-decoration: underline;
         }
-    `
+`
 
 export default function MProjects() {
     const Projects = () => {
