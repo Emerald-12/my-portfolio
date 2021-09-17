@@ -19,9 +19,9 @@ export default function MAbout() {
     return (
         <Container>
             <Wrap>
-                <h1>
-                    For tiden er jeg i læring på KodeHode kurset hos Bergen.Works
-                </h1>
+                <h2>
+                Hei, jeg heter Tom og har alltid vært mye interessert data og it gjennom livet, fra bygging og daglig bruk i mine unge år, gjennom programmering på videregående og nå gjennom frontend opplæringen på KodeHode.
+                </h2>
 
                 <p>
                     Innenfor koding stiller jeg klart sterkest med React og har en forkjærlighet for å ta dypdykk inn i koden for å finne nye og tekniske måter å gjøre ting på, jeg elsker å ta tak i et problem og leke meg med løsninger og sloss litt med språket for å bruke nysgjerrigheten min til å nå best  resultat.
