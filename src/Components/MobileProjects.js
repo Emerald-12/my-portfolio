@@ -47,12 +47,12 @@ export default function MProjects() {
                 <Container>
 
                     {data.slice(0, 5).map(data =>
-                        <Wrap>
+                        <Wrap key={data.id}>
                             <Description >
-                                { data.description ? <p>{data.description}</p> : <p>Make a new project to insert here</p>}
+                                {data.description ? <p>{data.description}</p> : <p>Make a new project to insert here</p>}
                             </Description>
 
-                            { data.screenshot ? <p style={{ textAlign: "center", margin: "0", width: "100%" }}><Image src={data.screenshot} alt=""></Image></p> : null}
+                            {data.screenshot ? <p style={{ textAlign: "center", margin: "0", width: "100%" }}><Image src={data.screenshot} alt=""></Image></p> : null}
                             <Description ><p>The Project is available, in it's current state, here:<br /> <br /><a href={`${data.url}`} target='_blank' rel="noreferrer">tomkhcoding.github.io/pokemon-search</a></p></Description>
                         </Wrap>
                     )

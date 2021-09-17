@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import React, {useEffect} from 'react'
 import { useFetch } from 'react-async';
 import {useSidebar, useSidebarUpdate} from '../SidebarContext'
 // eslint-disable-next-line
@@ -89,7 +89,7 @@ function ProjectList() {
                 <Container>
                     <ButtonCont>
                         {data.slice(0, 5).map(data =>
-                            <>
+                            <React.Fragment key={data.id}>
                                 {data.state==='disabled' ?
                                 <Button disabled key={data.id}><h1>{`${data.name}`}</h1></Button>
                                 :
@@ -97,7 +97,7 @@ function ProjectList() {
                                     <Button project><h1>{`${data.name}`}</h1></Button>
                                 </Link>
                                 }
-                            </>)}
+                            </React.Fragment>)}
                     </ButtonCont>
 
                    <Switch>

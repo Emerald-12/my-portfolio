@@ -16,6 +16,7 @@ const ButtonOverlay = styled.div`
     top:50%;
     width:100%;
     grid-area: picture, title;
+    z-index:1;
 `
 export default function MobileNav() {
     const sidebar = useSidebar()

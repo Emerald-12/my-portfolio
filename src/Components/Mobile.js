@@ -35,7 +35,7 @@ align-self: center;
 
 const StyledTitle = styled(Title)`
 grid-area:title;
-`
+` 
 
 
 export default function MobileHome() {
