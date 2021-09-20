@@ -10,7 +10,7 @@ display: grid;
         ". general general"
         ". general general"
         ". . ."; 
-margin-right: 5rem;
+
 height: 100%;
 `
 const General = styled.div`

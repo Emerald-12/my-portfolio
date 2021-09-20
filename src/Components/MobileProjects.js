@@ -13,7 +13,8 @@ const Container = styled.div`
 const Image = styled.img`
     height:600px;
     align-self:center;
-    justify-self:center;   
+    justify-self:center;
+    border-radius: 5px;
 `
 
 const Wrap = styled.div`
@@ -22,7 +23,7 @@ const Wrap = styled.div`
     border-radius:15px;
 `
 const Description = styled.div`
-        font-size:14px;
+        font-size:1.1rem;
         border-radius:15px;
         color:white;
         font-weight:bold;
