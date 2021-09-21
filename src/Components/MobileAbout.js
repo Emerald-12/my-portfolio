@@ -12,11 +12,8 @@ const Wrap = styled.div`
     margin: 5rem 25px;
     background-color: #252525;
     border-radius:15px;
-    /* padding: 1rem; */
     font-size: 1.5rem;
     font-weight:bold;
-
-
 `
 const Description = styled.div `
     font-size:14px;
@@ -24,12 +21,11 @@ const Description = styled.div `
     color:white;
     font-weight:bold;
     white-space:pre-wrap;
-    /* padding: 1rem; */
 `
 
 const Intro = styled.div`
     background-color: #606060;
-    padding: 1px 10px;
+    padding: 10px 10px;
     border-radius: 15px;
 `
 
