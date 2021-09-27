@@ -35,6 +35,7 @@ const Description = styled.div`
         a{
             color:white;
             text-decoration: underline;
+            word-break:break-word;
         }
 `
 

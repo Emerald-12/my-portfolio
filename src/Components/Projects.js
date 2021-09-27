@@ -38,7 +38,7 @@ const ButtonCont = styled.div`
 
   `
 const Container = styled.div`
-    height:90vh;
+    height:calc(100vh - 2.5rem);
     max-width: calc(100vw - 300px);
     padding-top:1rem;
     margin-right:2rem;
@@ -60,7 +60,7 @@ margin:0;
 white-space:pre-wrap;
 
 a{
-    color:black;
+    color: #f9f1f1;
     transition: all 0.25s;
     transform: translate(-50%, -50%);
 } a:hover {

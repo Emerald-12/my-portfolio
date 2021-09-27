@@ -29,25 +29,16 @@ padding:0 ;
 margin:0;
 grid-area: github;
 
-
-
-
-:hover{
-    background-color: silver;
-    color:black;
-    border-radius:100%;
-}
+    :hover{
+        background-color: silver;
+        color:black;
+        border-radius:100%;
+    }
 `
-
-// .something { grid-area: something; }
-
-
-
 
 const FooterCopy = styled.p`
     grid-area: copyright;
     margin:0;
-    /* padding: 0;  */
     color:silver;
     font-size: 1.5rem;
     text-align: center;

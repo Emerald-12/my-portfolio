@@ -30,6 +30,7 @@ const Description = styled.div `
     color:white;
     font-weight:bold;
     white-space:pre-wrap;
+    line-height: 145%;
     /* padding: 1rem; */
 `
 

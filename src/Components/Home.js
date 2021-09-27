@@ -12,21 +12,18 @@ const FooterWrapper = styled.div`
   position: absolute;
   bottom:0;
   width:100%;
-  padding-bottom:1px;
 `
 const ContentContainer = styled.div`
   position: absolute;
   transition: all 1s;
   width:stretch;
   max-width: calc(100vw - 300px);
-  height: calc(100vh - 2.5rem - 3px);
+  height: calc(100vh - 2.5rem);
   left: ${props => props.theme.left};
   padding: 0;
   top: 0;
-  border-left: 3px solid silver;
-  border-bottom: 3px solid silver;
   opacity:${props=>props.theme.opacity};
-  background: linear-gradient(to bottom right, rgba(23,23,23,1) 0%, rgba(100,100,100,1) 125%);
+  background: linear-gradient(to bottom right, rgba(40,40,40,1) 0%, rgba(100,100,100,1) 100%);
   /* background-color:#777777; */
   `
   
