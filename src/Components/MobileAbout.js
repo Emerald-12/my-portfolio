@@ -27,8 +27,8 @@ const Intro = styled.div`
     background-color: #606060;
     padding: 10px 10px;
     border-radius: 15px;
+    margin-top: 3rem;
 `
-
 
 export default function MAbout() {
     return (
