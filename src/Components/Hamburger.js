@@ -64,8 +64,7 @@ export default function Hamburger() {
     const [theme, setTheme] = useState(wrapperTheme)
     const history = useHistory();
     const  path = (history.location.pathname).replace('/', '')
-    console.log(path)
-    
+   
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 40 ) {

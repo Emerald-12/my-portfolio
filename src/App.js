@@ -16,7 +16,6 @@ function App() {
 
   function RedirectMobile() {
     let history = useHistory();
-    console.log(history)
     history.replace('/m/')
 
   }

@@ -52,7 +52,6 @@ const history = useHistory()
     if (history.location.hash === "#/" && sidebar ) {
       toggleSidebar(false)
     }
-    console.log(history)
   }, history.hash)
 
   

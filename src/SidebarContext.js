@@ -16,7 +16,6 @@ export function SidebarProvider({children}) {
 
     function toggleSidebar() {
      setSidebar(prevSidebar => !prevSidebar)
-     console.log(sidebar)
     }
     return (
         <SidebarContext.Provider value= {sidebar}>
