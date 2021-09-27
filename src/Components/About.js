@@ -1,17 +1,22 @@
 import styled from 'styled-components'
 
+import image from '../Media/Me.jpg'
+
+
 const Container = styled.div`
-    display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
-        gap: 0px; 
-        grid-template-areas:
-            ". . ."
-            ". general general"
-            ". general general"
-            ". . ."; 
-    height: 100%;
-`
+        display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr; 
+            gap: 0px; 
+            grid-template-areas:
+                ". . ."
+                "picture general general"
+                "picture general general"
+                ". . ."; 
+        margin-right: 5rem;
+        height: 100%;
+    `
+
 const Wrap = styled.div`
     grid-area: general;
     background-color: #202020;
@@ -20,7 +25,7 @@ const Wrap = styled.div`
     border-radius: 15px;
 `
 const Description = styled.div `
-    font-size:14px;
+    font-size:16px;
     border-radius:15px;
     color:white;
     font-weight:bold;
@@ -33,16 +38,24 @@ const Intro = styled.div`
     padding: 1px 10px;
     border-radius: 15px;
 `
+const Img = styled.img`
+    width: 250px;
+    border-radius: 15px;
+    align-items: center;
+    grid-area: picture;
+    margin-left: 5rem;
+`
 
 export default function About() {
 
     return (
         <Container>
+            <Img src={image}  alt=''/>
             <Wrap>
                 <Intro>
-                        <p>
+                        <h2>
                             Hei, jeg heter Tom og har alltid vært mye interessert i data og IT gjennom livet<br/> fra bygging og daglig bruk i mine unge år, gjennom programmering på videregående og nå gjennom frontend opplæringen på KodeHode.
-                        </p>
+                        </h2>
                     </Intro>
                     <Description>
                         <p>

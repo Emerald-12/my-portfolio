@@ -26,7 +26,7 @@ const ContentContainer = styled.div`
   border-left: 3px solid silver;
   border-bottom: 3px solid silver;
   opacity:${props=>props.theme.opacity};
-  background: linear-gradient(to bottom right, rgba(60,0,150,1) 0%,rgba(0,220,255,1)  100%);
+  background: linear-gradient(to bottom right, rgba(23,23,23,1) 0%, rgba(100,100,100,1) 125%);
   /* background-color:#777777; */
   `
   

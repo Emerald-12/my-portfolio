@@ -47,19 +47,19 @@ export default function ButtonList(props) {
             <ButtonCont >
                   
                   {props.mobile ?<Link exact to ='/'>
-                    <MainButton mobile = {props.mobile} text = 'Home'/>
+                    <MainButton mobile = {props.mobile} text = 'Hjem'/>
                   </Link>: null}
 
                   <Link to='/projects'>
-                    <MainButton mobile = {props.mobile} text = 'Projects'/>
+                    <MainButton mobile = {props.mobile} text = 'Prosjekter'/>
                   </Link>
                 
                   <Link to='/about'>
-                    <MainButton mobile = {props.mobile} text = 'About'/>
+                    <MainButton mobile = {props.mobile} text = 'Om meg'/>
                   </Link>
 
                   <Link to='/contact'>
-                    <MainButton mobile = {props.mobile} text = 'Contact'/>
+                    <MainButton mobile = {props.mobile} text = 'Kontakt'/>
                   </Link>
               </ButtonCont>
     )

@@ -62,8 +62,10 @@ white-space:pre-wrap;
 a{
     color:black;
     transition: all 0.25s;
+    transform: translate(-50%, -50%);
 } a:hover {
-    font-size:130%;
+
+    font-size: 105%;
     transition: all 0.25s;
 }
 
@@ -107,10 +109,12 @@ function ProjectList() {
                             <iframe style={{gridArea:'iframe', border:'none', borderRadius:'15px'}} src={`${data.url}`} title={`${data.name}`} width='100%' height='100%' scrolling='no'></iframe>
 
                             <Description style={{gridArea:'info1'}}>
-                                <p>{data.description}</p>
+                                <p>{data.descriptionNo}</p>
                             </Description>
                             
-                            <Description style={{gridArea:'info2'}}><p>The Project is available, in it's current state, here:<br/> <br/><a href={`${data.url}`} target='_blank' rel="noreferrer">tomkhcoding.github.io/pokemon-search</a></p></Description>
+                            <Description style={{gridArea:'info2'}}><p>Prosjektet er tilgjengelig i sin nåværende tilstand her:<br/> <br/><a href={`${data.url}`} target='_blank' rel="noreferrer">{data.url}</a></p>
+                            <p>Koden til prosjektet kan finnes her: <br/><br/><a href={`${data.codeUrl}`} target='_blank' rel="noreferrer">{data.codeUrl}</a></p>
+                            </Description>
 
                         </Route>
                     )}</Switch>

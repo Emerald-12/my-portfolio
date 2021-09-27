@@ -83,7 +83,7 @@ function Picture() {
             <Container>
                     <Img src = {image} alt='' />
                     <Overlay onClick={clicky}>
-                        <HomeText>Home</HomeText>
+                        <HomeText>Hjem</HomeText>
                     </Overlay>
             </Container>
         </ThemeProvider>
