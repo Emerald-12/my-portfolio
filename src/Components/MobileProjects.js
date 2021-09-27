@@ -52,14 +52,16 @@ export default function MProjects() {
                     {data.slice(0, 5).map(data =>
                         <Wrap key={data.id}>
                             <Description >
-                                {data.descriptionNo ? <p>{data.descriptionNo}</p> : <p>Make a new project to insert here</p>}
+                                {data.descriptionNo ? <p>{data.descriptionNo}</p> : <p>Nye prosjekter kommer her fortløpende</p>}
                             </Description>
 
                             {data.screenshot ? <p style={{ textAlign: "center", margin: "0", width: "100%" }}><Image src={data.screenshot} alt=""></Image></p> : null}
+                            
+                            {data.descriptionNo ? 
                             <Description >
                                 <p>Prosjektet er tilgjengelig i sin nåværende tilstand her:<br /> <br /><a href={`${data.url}`} target='_blank' rel="noreferrer">{data.url}</a></p>
                                 <p>Koden til prosjektet kan finnes her: <br/><br/><a href={`${data.codeUrl}`} target='_blank' rel="noreferrer">{data.codeUrl}</a></p>
-                            </Description>
+                            </Description> : null}
                         </Wrap>
                     )
                     }
