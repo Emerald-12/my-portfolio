@@ -2,11 +2,11 @@
 import { HashRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import styled from 'styled-components';
 
-import Title from './Title';
-import image from '../Media/Me.jpg';
-import Footer from './Footer';
-import MobileNav from './MobileNav';
-import Hamburger from './Hamburger';
+import Title from '../../Components/Title';
+import image from '../../Media/Me.jpg';
+import Footer from '../../Components/Footer';
+import MobileNav from '../../Pages/Mobile/MobileNav';
+import Hamburger from '../../Components/Hamburger';
 import MProjects from './MobileProjects';
 import MAbout from './MobileAbout';
 
@@ -52,8 +52,8 @@ export default function MobileHome() {
                             <StyledTitle />
                         </Route>
                         
-                        <Route  path='/projects' component= {MProjects}/>
-                        <Route path='/about' component= {MAbout} />
+                        <Route  path='/prosjekt' component= {MProjects}/>
+                        <Route path='/om' component= {MAbout} />
                         {/* <Route exact path='/m/cv' />
                         <Route exact path='/m/contact' /> */}
                     </Switch>

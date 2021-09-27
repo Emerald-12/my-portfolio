@@ -1,14 +1,14 @@
 import {useEffect} from 'react'
 // eslint-disable-next-line
 import { HashRouter as Router, Switch, Route, Link, Redirect, useHistory} from 'react-router-dom';
-import {useSidebar, useSidebarUpdate} from '../SidebarContext';
+import {useSidebar, useSidebarUpdate} from '../../SidebarContext'
 import styled, {ThemeProvider} from "styled-components";
 
 
-import NavComp from './NavComp';
+import NavComp from '../../Components/NavComp';
 import Projects from './Projects';
 import About from './About'
-import Footer from './Footer'
+import Footer from '../../Components/Footer'
 import Contact from './Contact';
 
 const FooterWrapper = styled.div`
@@ -63,9 +63,9 @@ const history = useHistory()
                 <ThemeProvider theme={theme}>
                 <Switch >
                     <ContentContainer>
-                    <Route  path ='/projects' component= {Projects}/>
-                    <Route  path = '/about' component = {About}/>
-                    <Route  path = '/contact' component = {Contact} />
+                    <Route  path ='/prosjekt' component= {Projects}/>
+                    <Route  path = '/om' component = {About}/>
+                    <Route  path = '/kontakt' component = {Contact} />
                     </ContentContainer>
                 </Switch>
                 </ThemeProvider>

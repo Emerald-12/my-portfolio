@@ -6,9 +6,9 @@ import GlobalStyles from "./GlobalStyles";
 
 
 // eslint-disable-next-line
-import MobileHome from './Components/Mobile';
+import MobileHome from './Pages/Mobile/Mobile';
 // eslint-disable-next-line
-import Home from './Components/Home';
+import Home from './Pages/Desktop/Home';
 
 
 function App() {

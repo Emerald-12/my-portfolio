@@ -1,7 +1,7 @@
 
-import ButtonList from './ButtonList'
+import ButtonList from '../../Components/ButtonList'
 import styled, {ThemeProvider} from 'styled-components'
-import { useSidebar } from '../SidebarContext';
+import { useSidebar } from '../../SidebarContext';
 
 
 const ButtonOverlay = styled.div`

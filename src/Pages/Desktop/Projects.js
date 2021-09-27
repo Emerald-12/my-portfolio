@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react'
 import { useFetch } from 'react-async';
-import {useSidebar, useSidebarUpdate} from '../SidebarContext'
+import {useSidebar, useSidebarUpdate} from '../../SidebarContext'
 // eslint-disable-next-line
 import { HashRouter as Router, Switch, Route, Redirect, NavLink} from 'react-router-dom';
 // eslint-disable-next-line
 import styled from 'styled-components';
 
-import {Button} from './ButtonComponents';
+import {Button} from '../../Components/ButtonComponents';
 const Link = styled(NavLink)`
   text-decoration:none;`
 const ButtonCont = styled.div`
@@ -87,7 +87,7 @@ function ProjectList() {
         if (error) return error.message
         if (data)  return (
             
-            <Router basename='/projects'>
+            <Router basename='/prosjekt'>
                 <Container>
                     <ButtonCont>
                         {data.slice(0, 5).map(data =>

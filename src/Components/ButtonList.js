@@ -49,15 +49,15 @@ export default function ButtonList(props) {
                     <MainButton mobile = {props.mobile} text = 'Hjem'/>
                   </Link>: null}
 
-                  <Link to='/projects'>
+                  <Link to='/prosjekt'>
                     <MainButton mobile = {props.mobile} text = 'Prosjekter'/>
                   </Link>
                 
-                  <Link to='/about'>
+                  <Link to='/om'>
                     <MainButton mobile = {props.mobile} text = 'Om meg'/>
                   </Link>
 
-                  <Link to='/contact'>
+                  <Link to='/kontakt'>
                     <MainButton mobile = {props.mobile} text = 'Kontakt'/>
                   </Link>
               </ButtonCont>
