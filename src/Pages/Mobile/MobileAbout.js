@@ -6,10 +6,10 @@ const Container = styled.div`
     color:white;
     min-height:100vh;   
     max-height:min-content; 
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 `
 const Wrap = styled.div`
-    margin: 5rem 25px;
+    margin: 3rem 25px;
     background-color: #252525;
     border-radius:15px;
     font-size: 1.5rem;
@@ -21,25 +21,30 @@ const Description = styled.div `
     color:white;
     font-weight:bold;
     white-space:pre-wrap;
+    margin: 3rem 1rem;
+    padding:1rem;
+    height:fit-content;
 `
 
 const Intro = styled.div`
     background-color: #606060;
     padding: 10px 10px;
     border-radius: 15px;
-    margin-top: 3rem;
+    margin: 5rem 25px 1rem;
+    font-size: 1.5rem;
+    font-weight:bold;
 `
 
 export default function MAbout() {
     return (
         <Container>
-            <Wrap>
                 <Intro>
                     <p>
                         Hei, jeg heter Tom og har alltid vært mye interessert i data og IT gjennom livet<br/> fra bygging og daglig bruk i mine unge år, gjennom programmering på videregående og nå gjennom frontend opplæringen på KodeHode.
                     </p>
                 </Intro>
 
+            <Wrap>
                 <Description>
                     <p>
                         Innenfor koding stiller jeg klart sterkest med React og har en forkjærlighet for å ta dypdykk inn i koden for å finne nye og tekniske måter å gjøre ting på, jeg elsker å ta tak i et problem og leke meg med løsninger og sloss litt med språket for å bruke nysgjerrigheten min til å nå best  resultat.

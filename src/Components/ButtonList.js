@@ -53,7 +53,7 @@ export default function ButtonList(props) {
                     <MainButton mobile = {props.mobile} text = 'Prosjekter'/>
                   </Link>
                 
-                  <Link to='/om'>
+                  <Link to='/om-meg'>
                     <MainButton mobile = {props.mobile} text = 'Om meg'/>
                   </Link>
 

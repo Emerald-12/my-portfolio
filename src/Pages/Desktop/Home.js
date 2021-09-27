@@ -64,7 +64,7 @@ const history = useHistory()
                 <Switch >
                     <ContentContainer>
                     <Route  path ='/prosjekt' component= {Projects}/>
-                    <Route  path = '/om' component = {About}/>
+                    <Route  path = '/om-meg' component = {About}/>
                     <Route  path = '/kontakt' component = {Contact} />
                     </ContentContainer>
                 </Switch>

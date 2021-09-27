@@ -53,7 +53,7 @@ export default function MobileHome() {
                         </Route>
                         
                         <Route  path='/prosjekt' component= {MProjects}/>
-                        <Route path='/om' component= {MAbout} />
+                        <Route path='/om-meg' component= {MAbout} />
                         {/* <Route exact path='/m/cv' />
                         <Route exact path='/m/contact' /> */}
                     </Switch>

@@ -63,7 +63,7 @@ export default function Hamburger() {
     
     const [theme, setTheme] = useState(wrapperTheme)
     const history = useHistory();
-    const  path = (history.location.pathname).replace('/', '')
+    const  path = ((history.location.pathname).replace('/', '')).replace('-', ' ')
    
     useEffect(() => {
         window.addEventListener("scroll", () => {
