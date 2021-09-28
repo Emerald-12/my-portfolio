@@ -38,11 +38,11 @@ const Intro = styled.div`
 export default function MAbout() {
     return (
         <Container>
-                <Intro>
-                    <p>
-                        Hei, jeg heter Tom og har alltid vært mye interessert i data og IT gjennom livet<br/> fra bygging og daglig bruk i mine unge år, gjennom programmering på videregående og nå gjennom frontend opplæringen på KodeHode.
-                    </p>
-                </Intro>
+            <Intro>
+                <p>
+                    Hei, jeg heter Tom og har alltid vært mye interessert i data og IT gjennom livet<br/> fra bygging og daglig bruk i mine unge år, gjennom programmering på videregående og nå gjennom frontend opplæringen på KodeHode.
+                </p>
+            </Intro>
 
             <Wrap>
                 <Description>
