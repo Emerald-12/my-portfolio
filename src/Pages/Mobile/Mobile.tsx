@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Title from '../../Components/Title';
 import image from '../../Media/Me.jpg';
 import Footer from '../../Components/Footer';
-import MobileNav from '../../Pages/Mobile/MobileNav';
+import MobileNav from './MobileNav';
 import Hamburger from '../../Components/Hamburger';
 import MProjects from './MobileProjects';
 import MAbout from './MobileAbout';
