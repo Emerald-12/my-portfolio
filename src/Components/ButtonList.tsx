@@ -41,7 +41,7 @@ width:75%;
 `
 
 
-export default function ButtonList(props) {
+export default function ButtonList(props: any) {
     return (
             <ButtonCont >
                   

@@ -11,7 +11,7 @@ import MobileHome from './Pages/Mobile/Mobile';
 import Home from './Pages/Desktop/Home';
 
 
-function App() {
+export default function App() {
   const mq = (window.matchMedia('(max-width: 769px)'))
 
   function RedirectMobile() {
@@ -36,5 +36,3 @@ function App() {
         
   );
 }
-
-export default App;
